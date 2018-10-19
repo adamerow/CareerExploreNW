@@ -170,14 +170,7 @@ article.hasResults
     height: 245px;
     position: relative;
     z-index: 2;
-    opacity: 0;
-    transform: scale(0);
     perspective: 1000px;
-}
-#results .result.visible
-{
-    opacity: 1;
-    transform: scale(1);
 }
 
 /* flip on hover */
