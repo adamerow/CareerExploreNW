@@ -65,15 +65,13 @@ jQuery(document).ready(function(){
     function animationOut() //info -> vid
     {
         //lines swoop out
-        $('#greenClip').addClass("open");
-        $('#content').addClass("open");
+        $('#blueLines').addClass("open");
+        $('#greenLines').addClass("open");
         
         //clips swoop out
         window.setTimeout(function (){
-            $('#blueLines').addClass("open");
-            $('#greenLines').addClass("open");
-            $('#video-container iframe').removeClass("open");
-            $('#teaser').removeClass("open");
+            $('#greenClip').addClass("open");
+            $('#content').addClass("open");
         }, 500);
         
         //image fades out
