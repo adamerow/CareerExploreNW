@@ -17,54 +17,94 @@ jQuery(document).ready(function(){
     $('#openVideo').click(function(){
                 
         $('body').toggleClass("stop");
-        $('#greenClip').toggleClass("open");
-        $('#greenLines').toggleClass("open");
-        $('#stats').toggleClass("open");
-        $('#content').toggleClass("open");
-        $('#blueLines').toggleClass("open");
-        $('#teaser').toggleClass("open");
+//        $('#stats').toggleClass("open");
         $(this).toggleClass("open");
-
-        $('#green').toggleClass("view");
-        $('#greenLines').toggleClass("view");
         $(this).toggleClass("view");
         
-        if($(this).hasClass("open"))
-        {
-            window.setTimeout(function (){
-                $('#video-container iframe').addClass("open");
-            }, 1000);
+        if($(this).hasClass("open")) //vid -> info
+        {           
+//            $('#stats').addClass("open");
             
-            $('#stats').addClass("open");
+            animationOut();
         }
-        else
+        else //info -> vid
         {
-            $('#video-container iframe').removeClass("open");
+//            window.setTimeout(function (){
+//                $('#stats').removeClass("open");
+//            }, 1000);
             
-            window.setTimeout(function (){
-                $('#stats').removeClass("open");
-            }, 1000);
+            animationIn();
         }
     });
+    
+    function animationIn() //vid -> info
+    {
+        //flip vid & image
+        $('#video-container iframe').removeClass("open");
+        
+        //image becomes visible
+        window.setTimeout(function (){
+            $('#teaser').removeClass("open");
+        }, 50);
+        
+        //clips swoop in
+        window.setTimeout(function (){
+            $('#greenClip').removeClass("open");
+            $('#content').removeClass("open");
+        }, 500);
+        
+        //lines swoop in
+        window.setTimeout(function (){
+            $('#blueLines').removeClass("open");
+            $('#greenLines').removeClass("open");
+        }, 1000);
+        
+        
+    }
+    
+    function animationOut() //info -> vid
+    {
+        //lines swoop out
+        $('#greenClip').addClass("open");
+        $('#content').addClass("open");
+        
+        //clips swoop out
+        window.setTimeout(function (){
+            $('#blueLines').addClass("open");
+            $('#greenLines').addClass("open");
+            $('#video-container iframe').removeClass("open");
+            $('#teaser').removeClass("open");
+        }, 500);
+        
+        //image fades out
+        window.setTimeout(function (){
+            $('#teaser').addClass("open");
+        }, 1000);
+        
+        //flip vid & image
+        window.setTimeout(function (){
+            $('#video-container iframe').addClass("open");
+        }, 1500);
+    }
     
     //open/close stats    
-    $('#statTease').click(function(){
-        $('#stats').toggleClass("stats");
-        $('#stats').toggleClass("view");
-        $('#stats').toggleClass("active");
-        $('body').toggleClass("stop");
-        window.setTimeout(function (){
-            $('#statExit').toggleClass("hide");
-        }, 500);
-    });
-    
-    $('#statExit').click(function(){        
-        $('#stats').toggleClass("stats");
-        $('#stats').toggleClass("view");
-        $('#stats').removeClass("active");
-        $('#statTease').removeClass("active");
-        $('body').toggleClass("stop");
-    });
+//    $('#statTease').click(function(){
+//        $('#stats').toggleClass("stats");
+//        $('#stats').toggleClass("view");
+//        $('#stats').toggleClass("active");
+//        $('body').toggleClass("stop");
+//        window.setTimeout(function (){
+//            $('#statExit').toggleClass("hide");
+//        }, 500);
+//    });
+//    
+//    $('#statExit').click(function(){        
+//        $('#stats').toggleClass("stats");
+//        $('#stats').toggleClass("view");
+//        $('#stats').removeClass("active");
+//        $('#statTease').removeClass("active");
+//        $('body').toggleClass("stop");
+//    });
 
 });
 
