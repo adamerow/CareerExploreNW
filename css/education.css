@@ -8,7 +8,7 @@ body
 {
     padding: 130px 30px 30px 30px;
     background: #253E5E;
-    background-image: url(../../img/topographyBlue.png);
+    background-image: url(../img/topographyBlue.png);
     background-size: 300px;
     display: -webkit-flex;
     display: -moz-flex;
