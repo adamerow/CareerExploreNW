@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Educational Resources</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+        
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/education.css">
+    </head>
+    
+    <header>
+        <a href="./index.html" id="logoContainer">
+            <button id="logo">
+                <img src="img/CareerExploreLogo.svg" alt="CareerExploreNW">
+            </button>
+        </a>
+        <div id="nav-bar">
+            <a href="/education.html">
+                <img src="./img/icons/ICONS_MENU_Education.png" alt="">
+            </a>
+            <a href="/about.html">
+                <img src="./img/icons/ICONS_MENU_About.png" alt="">
+            </a>
+            <div>
+                <span href="#" id="hamburger">
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </header>
+     
+    <body>
+      
+        <div id="pageCover">
+            <div class="white"></div>
+            <div class="green"></div>
+        </div>
+       
+        <button onclick="topFunction()" id="toTop">&#8743;</button>
+        
+        <article id="passport">
+            <div class="passportSpot">
+                <a href="http://www.nextgenzone.org/passport-worksheet/">
+                    <img src="./img/resources/path_icon.png" alt="">
+                    <h2>Next Generation Zone</h2>
+                </a>
+            </div>
+            <div class="passportInfo">
+                <a href="http://www.nextgenzone.org/passport-worksheet/">
+                    <p>The Passport to Career Success is a free multi-media career platform for use by individuals, teachers and counselors. The Passport includes links to online sources of career planning exploration resources and tools, and will guide you through all phases of launching your career.</p>
+                </a>
+            </div>
+        </article>
+            
+        <article id="links">
+           
+            <div class="result"  ontouchstart="this.classList.toggle(' + "'hover'" + ');">
+                <div class="flip">
+                    <div class="front">
+                        <h2>College Bound</h2>
+                        <img src="img/resources/school_icon.png">
+                    </div>
+                    
+                    <div class="back">
+                        <a href="#">Find a school</a>
+                        <a href="#">Application tips</a>
+                        <a href="#">Financial aid tips</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="result"  ontouchstart="this.classList.toggle(' + "'hover'" + ');">
+                <div class="flip">
+                    <div class="front">
+                        <h2>Continuing Education</h2>
+                        <img src="img/resources/adult_icon.png">
+                    </div>
+                    
+                    <div class="back">
+<!--
+                        <a href="https://www.careerexplorenw.org/educational-resources/#">Find a school</a>
+                        <a href="https://www.careerexplorenw.org/educational-resources/#">Application tips</a>
+                        <a href="https://www.careerexplorenw.org/educational-resources/#">Financial aid tips</a>
+-->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="result"  ontouchstart="this.classList.toggle(' + "'hover'" + ');">
+                <div class="flip">
+                    <div class="front">
+                        <h2>Job Hunting</h2>
+                        <img src="img/resources/job_icon.png">
+                    </div>
+                    
+                    <div class="back">
+                        <a href="#">Resume Tips</a>
+                        <a href="#">Interview Tips</a>
+                        <a href="#">Local Job Listings</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <article id="schools">
+            <h2>Local Schools</h2>
+            <div class="grid">
+                <a href="http://ccs.spokane.edu/">
+                    <img src="./img/icons/logos/Schools/CENW_School_Logos_CCS.png" alt="">
+                </a>
+                <a href="http://ewu.edu/">
+                    <img src="./img/icons/logos/Schools/CENW_School_Logos_EWU.png" alt="">
+                </a>
+                <a href="https://www.nic.edu/">
+                    <img src="./img/icons/logos/Schools/CENW_School_Logos_NIC.png" alt="">
+                </a>
+                <a href="https://spokane.wsu.edu/">
+                    <img src="./img/icons/logos/Schools/CENW_School_Logos_WSU.png" alt="">
+                </a>
+                <a href="https://www.whitworth.edu/">
+                    <img src="./img/icons/logos/Schools/CENW_School_Logos_WTU.png" alt="">
+                </a>
+                <a href="https://www.gonzaga.edu/">
+                    <img src="./img/icons/logos/Schools/CENW_School_Logos_ZAG.png" alt="">
+                </a>
+            </div>
+        </article>
+    
+    </body>
+    
+    <footer>
+        <a href="https://www.ksps.org">
+            <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_KSPS.png" alt="">
+        </a>
+        <a href="https://wdcspokane.com/">
+            <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_Spokane%20Workforce%20Council.png" alt="">
+        </a>
+    </footer>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/global.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    
+    <script>
+        //OPEN PAGE
+        window.setTimeout(function()
+        {
+            $('#pageCover').addClass("openPage");
+        }, 1000);
+
+    </script>
+</html>

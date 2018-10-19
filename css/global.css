@@ -1,0 +1,376 @@
+/* blue: #253E5E */
+/* light blue: #4994D0 */
+/* dark green: #434F39 */
+/* light green: #586742 */
+/* gray: #999999 */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500,800);
+
+/*    GLOBAL    */
+
+h1 /* headder */
+{
+    font-size: calc(4em + 1vmin);
+    font-weight: 800;
+    text-align: right;
+    margin: 0;
+    color: #fff;
+}
+h2 /* subhead */
+{
+    font-size: calc(1em + 1vmin);
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+}
+h3 /* bold p */
+{
+    font-size: calc(.75em + .5vmin);
+    margin: 0;
+    text-align: left;
+    color: #fff;
+}
+h4 /* thin subhead */
+{
+    font-size: calc(1em + 1vmin);
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    color: #4994D0;
+}
+p /* copy text */
+{
+    font-size: calc(.75em + .5vmin);
+    font-weight: 500;
+    text-align: left;
+    color: white;
+    margin: 0;
+}
+p.sub /* subtext */
+{
+    font-size: .75em;
+    font-weight: 500;
+    text-align: center;
+    color: #4994D0;
+    margin: 0;
+}
+a
+{
+    text-decoration: none;
+    font-size: calc(.75em + .5vmin);
+    color: #4994D0;
+    pointer-events: all;
+}
+ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li a:hover
+{
+    font-weight: 800;
+    color: white;
+    letter-spacing: 2px;
+}
+button:focus
+{
+    outline: none;
+}
+
+body
+{
+    letter-spacing: 1px;
+    font-family: "Montserrat";
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    background: #253E5E;
+    background-image: url(../img/topographyBlue.png);
+    background-size: 300px;
+    padding-bottom: 30px;
+}
+.stop
+{
+    overflow-y: hidden;
+}
+
+body *
+{
+    transition: all .5s;
+}
+
+.slick-slide
+{
+    outline: none;
+}
+
+/*    HEADER    */
+
+header
+{
+    height: 60px;
+    width: calc(100vw - 60px);
+    background: #fff;
+    z-index: 10; 
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-shadow: 0 0 30px #000;
+}
+header #logoContainer
+{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+#logo
+{
+    height: 50px;
+    width: 270px;
+    padding: 0;
+    margin: 5px;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+#logo img
+{
+    height: 100%;
+    width: 100%;
+}
+#nav-bar
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 260px;
+    height: 60px;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+#nav-bar div
+{
+    width: 60px;
+}
+#nav-bar a
+{
+    width: 40px;
+    opacity: 0;
+    padding: 5px;
+    position: relative;
+    transform: scale(0);
+}
+#nav-bar a img
+{
+    width: calc(100% - 10px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.open-nav a
+{
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+
+/*    HAMBURGER    */
+
+#hamburger
+{
+    display: block;
+    width: 65px;
+    height: calc(50px - 3vmin);
+    min-height: calc(60px - 3vmin);
+    margin: 1.5vmin 0;
+    transition: 0.3s;
+    transform: scale(.5);
+    cursor: pointer;
+}
+#hamburger span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 0;
+  width: 40px;
+  border: 4px solid #000;
+  border-radius: 50px;
+  margin: -4px 0 0 -28px;
+  transition: 0.3s;
+}
+#hamburger.open span {
+  height: 40px;
+  margin: -26px 0 0 -30px;
+  border-width: 6px;
+}
+#hamburger span:before,
+#hamburger span:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 48px;
+    height: 0.5rem;
+    background: #000;
+    border-radius: 50px;
+    margin: 0 0 0 -24px;
+    transition: 0.3s;
+}
+#hamburger.open span:before,
+#hamburger.open span:after {
+    top: 19px;
+    width: 32px;
+    margin: -2px 0 0 -16px;
+}
+#hamburger span:before {
+  top: -18px;
+} 
+#hamburger.open span:before {
+  transform: rotate(-135deg);
+}
+#hamburger span:after {
+  top: 10px;
+}
+#hamburger.open span:after {
+  transform: rotate(135deg);
+}
+
+/*    FOOTER    */
+
+footer
+{
+    height: 40px;
+    padding: 10px 15px;
+    background: #586742;
+    z-index: 10; 
+    position: fixed;
+    left: 0;
+    bottom: 30px;
+    margin: 0 auto;
+    box-shadow: 0 0 30px #000;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer a img
+{
+    height: 100%;
+    max-height: 40px;
+    padding: 0 15px;
+    display: inline-block;
+}
+
+/*    BACK TO TOP BUTTON    */
+
+#toTop
+{
+    position: fixed;
+    background: #4994D0;
+    width: 120px;
+    height: 50px;
+    z-index: 10;
+    bottom: 110px;
+    right: 30px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 800;
+    border: none;
+    padding: 10px;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+}
+#toTop.visible
+{
+    opacity: .75;
+    visibility: visible;
+}
+
+/*    PAGE COVER    */
+
+#pageCover /* default closed */
+{
+    width: 100vw;
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    transition: top 1s ease;
+}
+#pageCover .white
+{
+    width: 100%;
+    height: calc(200vh + 100vw);
+    background: white;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 100vw), 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 100vw), 0% 100%);
+    position: absolute;
+    z-index: 2;
+}
+#pageCover .green
+{
+    width: 100%;
+    height: calc(200vh + 100vw);
+    background: #586742;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 100vw), 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 100vw), 0% 100%);
+    margin-top: 80%;
+}
+
+.openPage
+{
+    top: -400vmax !important;
+}
+
+/*    MEDIA QUERIES    */
+
+@media (max-width: 499px)
+{
+    #nav-bar
+    {
+        width: calc(100% - 60px);
+    }
+    #nav-bar a
+    {
+        width: calc((100% - 65px) / 3);
+        max-width: 50px;
+    }
+    #nav-bar div
+    {
+        width: 50px;
+    }
+    #hamburger
+    {
+        margin: 1.5vmin -5px;
+    }
+    
+    footer
+    {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+@media (max-width: 699px)
+{
+    #logo
+    {
+        width: 50px;
+    }
+}

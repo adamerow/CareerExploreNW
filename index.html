@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Career Explore NW</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+        
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/slick/slick.css">
+        <link rel="stylesheet" href="./css/slick/slick-theme.css">
+        <link rel="stylesheet" href="./css/careers.css">
+    </head>
+    
+    <header>
+        <a href="./index.html" id="logoContainer">
+            <button id="logo">
+                <img src="img/CareerExploreLogo.svg" alt="CareerExploreNW">
+            </button>
+        </a>
+        <div id="nav-bar">
+            <a href="/education.html">
+                <img src="./img/icons/ICONS_MENU_Education.png" alt="">
+            </a>
+            <a href="/about.html">
+                <img src="./img/icons/ICONS_MENU_About.png" alt="">
+            </a>
+            <div>
+                <span id="hamburger">
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </header>
+     
+    <body>
+       
+        <div id="pageCover">
+            <div class="white"></div>
+            <div class="green"></div>
+        </div>
+        
+        <button onclick="topFunction()" id="toTop">&#8743;</button>
+       
+        <article id="searchSort">
+            
+            <div id="searchBG"></div>
+           
+            <h1>Start your journey</h1>
+            <div class="forms">
+                <form id="search">
+                    <h2>Search by job title</h2>
+                    <input type="text" data-ref="input-search" placeholder="&#9906; Search by job title">
+                </form>
+
+                <form id="filter">
+                    <h2>Search by skill</h2>
+                    <div class="buttons">
+                        <button type="button" data-filter="all">View all</button>
+                        <button type="button" data-toggle=".AttentionToDetail">Attention To Detail</button>
+                        <button type="button" data-toggle=".ComputerSkills">Computer Skills</button>
+                        <button type="button" data-toggle=".Language">Language</button>
+                        <button type="button" data-toggle=".Leadership">Leadership</button>
+                        <button type="button" data-toggle=".Math">Math</button>
+                        <button type="button" data-toggle=".Motivation">Motivation</button>
+                        <button type="button" data-toggle=".Organization">Organization</button>
+                        <button type="button" data-toggle=".Planning">Planning</button>
+                        <button type="button" data-toggle=".ProblemSolving">Problem Solving</button>
+                        <button type="button" data-toggle=".QualityControl">Quality Control</button>
+                        <button type="button" data-toggle=".Research">Research</button>
+                        <button type="button" data-toggle=".StrengthDexterity">Strength &amp; Dexterity</button>
+                        <button type="button" data-toggle=".VehicleOperation">Vehicle Operation</button>
+                        <button type="button" data-toggle=".VerbalCommunication">Verbal Communication</button>
+                        <button type="button" data-toggle=".WrittenCommunication">Written Communication</button>
+                    </div>
+                </form>
+            </div>
+        </article>
+        
+        <article id="results" class="mixContainer">
+        
+        </article>
+        
+        <article id="industries">
+           
+            <div class="bg"></div>
+            
+            <div class="industryCarousel">
+               
+                <div data-name="Agriculture" class="industry">
+                    <div>
+<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
+                        <img class="teaserImg" src="https://media.istockphoto.com/photos/couple-carefully-maintaining-farm-plot-together-picture-id923225992?s=2048x2048">
+                    </div>
+                    <p>Agriculture</p>
+                </div>
+               
+                <div data-name="Architecture & Construction" class="industry">
+                    <div>
+<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
+                        <img class="teaserImg" src="https://media.istockphoto.com/photos/architect-and-construction-worker-with-plans-tablet-pc-and-laptop-picture-id535164659?s=2048x2048">
+                    </div>
+                    <p>Architecture &amp; Construction</p>
+                </div>
+               
+                <div data-name="Community & Nonprofit" class="industry">
+                    <div>
+<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
+                        <img class="teaserImg" src="https://media.istockphoto.com/photos/sorting-non-perishable-foods-picture-id598937120?s=2048x2048">
+                    </div>
+                    <p>Community &amp; Nonprofit</p>
+                </div>
+               
+                <div data-name="Finance & Insurance" class="industry">
+                    <div>
+<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
+                        <img class="teaserImg" src="https://media.istockphoto.com/photos/african-business-people-working-late-picture-id531046181?s=2048x2048">
+                    </div>
+                    <p>Finance &amp; Insurance</p>
+                </div>
+               
+                <div data-name="Healthcare & Social Assistance" class="industry">
+                    <div>
+<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
+                        <img class="teaserImg" src="https://media.istockphoto.com/photos/mature-female-doctor-taking-pulse-of-senior-patient-picture-id471088108?s=2048x2048">
+                    </div>
+                    <p>Healthcare &amp; Social Assistance</p>
+                </div>
+               
+                <div data-name="Manufacturing" class="industry">
+                    <div>
+                        <span class="play">&#9654;</span>
+                        <img class="teaserImg" src="https://media.istockphoto.com/photos/mechanic-and-female-engineer-talking-in-factory-picture-id841574354?s=2048x2048">
+                    </div>
+                    <p>Manufacturing</p>
+                </div>
+               
+                <div data-name="Science & Technology" class="industry">
+                    <div>
+<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
+                        <img class="teaserImg" src="https://media.istockphoto.com/photos/bookshop-managers-working-on-laptop-picture-id451589105?s=2048x2048">
+                    </div>
+                    <p>Science &amp; Technology</p>
+                </div>
+               
+                <div data-name="Transportation & Warehousing" class="industry">
+                    <div>
+<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
+                        <img class="teaserImg" src="https://media.istockphoto.com/photos/getting-containers-loaded-for-shipment-picture-id647578378?s=2048x2048">
+                    </div>
+                    <p>Transportation &amp; Warehousing</p>
+                </div>
+                                
+            </div>
+            
+            <div class="jobsCarousel">
+            
+                <div data-name="Agriculture" class="industryJobs">
+                    <h2>Agriculture</h2>
+                    <div class="jobGrid"></div>        
+                </div>
+                
+                <div data-name="Architecture & Construction" class="industryJobs">
+                    <h2>Architecture &amp; Construction</h2>
+                    <div class="jobGrid"></div>        
+                </div>
+                
+                <div data-name="Community & Nonprofit" class="industryJobs">
+                    <h2>Community &amp; Nonprofit</h2>
+                    <div class="jobGrid"></div>        
+                </div>
+                
+                <div data-name="Finance & Insurance" class="industryJobs">
+                    <h2>Finance &amp; Insurance</h2>
+                    <div class="jobGrid"></div>        
+                </div>
+                
+                <div data-name="Healthcare & Social Assistance" class="industryJobs">
+                    <h2>Healthcare &amp; Social Assistance</h2>
+                    <div class="jobGrid"></div>        
+                </div>
+                
+                <div data-name="Manufacturing" class="industryJobs">
+                    <h2>Manufacturing</h2>
+                    <div class="jobGrid"></div>        
+                </div>
+                
+                <div data-name="Science & Technology" class="industryJobs">
+                    <h2>Science &amp; Technology</h2>
+                    <div class="jobGrid"></div>        
+                </div>
+                
+                <div data-name="Transportation & Warehousing" class="industryJobs">
+                    <h2>Transportation &amp; Warehousing</h2>
+                    <div class="jobGrid"></div>        
+                </div>
+                
+            </div>
+            
+        </article>
+        
+        <article class="industryModals">
+               
+            <div data-name="Agriculture" class="modal">
+                <button>&#215;</button>
+                <div class="videoBox">
+                    <h2>Video comming soon</h2>
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+                <p>Agriculture is the cultivation of land and breeding of animals and plants to provide food, fiber, medicinal plants and other products to sustain and enhance life. Agriculture was the key development in the rise of sedentary human civilization, whereby farming of domesticated species created food surpluses that enabled people to live in cities.</p>
+                <ul>
+                    <h2>Local Companies</h2>
+                    <li>Arbor Crest Wine Cellars</li>
+                    <li>Latah Creek Wine Cellars</li>
+                    <li>Spokane Seed Co.</li>
+                    <li>Townshend Cellar</li>
+                </ul>
+                <img src="./img/industries/MAP_Agriculture.png" alt="">
+            </div>
+
+            <div data-name="Architecture & Construction" class="modal">
+                <button>&#215;</button>
+                <div class="videoBox">
+                    <h2>Video comming soon</h2>
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+                <p>Architecture is both the process and the product of planning, designing, and constructing buildings or any other structures. Architectural works, in the material form of buildings, are often perceived as cultural symbols and as works of art. Construction is the process of constructing a building or infrastructure. Construction differs from manufacturing in that manufacturing typically involves mass production of similar items without a designated purchaser, while construction typically takes place on location for a known client.</p>
+                <ul>
+                    <h2>Local Companies</h2>
+                    <li>ALSC Architects PS</li>
+                    <li>Architects West Inc.</li>
+                    <li>Bernardo|Wills Architects PC</li>
+                    <li>Integrus Architecture PS</li>
+                    <li>NAC Architecture</li>
+                </ul>
+                <img src="./img/industries/MAP_Architecture.png" alt="">
+            </div>
+
+            <div data-name="Community & Nonprofit" class="modal">
+                <button>&#215;</button>
+                <div class="videoBox">
+                    <h2>Video comming soon</h2>
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+                <p>A non-profit organization (NPO), also known as a non-business entity or non-profit institution, is dedicated to furthering a particular social cause or advocating for a shared point of view. In economic terms, it is an organization that uses its surplus of the revenues to further achieve its ultimate objective, rather than distributing its income to the organization's shareholders, leaders, or members.</p>
+                <ul>
+                    <h2>Local Companies</h2>
+                    <li><a href="https://ksps.org">KSPS Public Television</a></li>
+                    <li>Inland Northwest Blood Center</li>
+                    <li>Second Harvest Food Bank</li>
+                    <li>YMCA of the Inland Northwest</li>
+                </ul>
+                <img src="./img/industries/MAP_Community.png" alt="">
+            </div>
+
+            <div data-name="Finance & Insurance" class="modal">
+                <button>&#215;</button>
+                <div class="videoBox">
+                    <h2>Video comming soon</h2>
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+                <p>Finance is a field that deals with the study of investments. It includes the dynamics of assets and liabilities over time under conditions of different degrees of uncertainties and risks. Insurance is a means of protection from financial loss. It is a form of risk management, primarily used to hedge against the risk of a contingent or uncertain loss.</p>
+                <ul>
+                    <h2>Local Companies</h2>
+                    <li>Anastasi Moore Martin PLLC</li>
+                    <li>Eide Bailly LLP</li>
+                    <li>Kaiser Permanente</li>
+                    <li>Moss Adams LLP</li>
+                    <li>Premera Blue Cross</li>
+                </ul>
+                <img src="./img/industries/MAP_Finance.png" alt="">
+            </div>
+
+            <div data-name="Healthcare & Social Assistance" class="modal">
+                <button>&#215;</button>
+                <div class="videoBox">
+                    <h2>Video comming soon</h2>
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+                <p>Healthcare is the maintenance or improvement of health via the prevention, diagnosis, and treatment of disease, illness, injury, and other physical and mental impairments in human beings. It includes work done in providing primary care, secondary care, and tertiary care, as well as in public health.</p>
+                <ul>
+                    <h2>Local Companies</h2>
+                    <li><a href="http://chas.org/">Chas Health</a></li>
+                    <li>Community Health Association of Spokane</li>
+                    <li>Frontier Behavioral Health</li>
+                    <li>Shriners Hospitals for Children</li>
+                    <li>Spokane Neighborhood Action Partners</li>
+                </ul>
+                <img src="./img/industries/MAP_Healthcare.png" alt="">
+            </div>
+
+            <div data-name="Manufacturing" class="modal">
+                <button>&#215;</button>
+                <div class="videoBox">
+                    <h2>Video comming soon</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/H_NHfGX3jdc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <p>Manufacturing is the production of merchandise for use or sale using labour and machines, tools, chemical and biological processing, or formulation. The term may refer to a range of human activity, from handicraft to high tech, but is most commonly applied to industrial production, in which raw materials are transformed into finished goods on a large scale.</p>
+                <ul>
+                    <h2>Local Companies</h2>
+                    <li><a href="https://www.hotstart.com/">HOTSTART</a></li>
+                    <li><a href="https://www.mackaymfg.com/">MacKay Manufacturing</a></li>
+                    <li><a href="https://www.pyrotek.com/">Pyrotek</a></li>
+                    <li><a href="https://www.wagstaff.com/Wagstaff.htm">Wagstaff Inc.</a></li>
+                    <li>Cascade NW Siding &amp; Windows LLC</li>
+                    <li>CPM Development Corporation</li>
+                    <li>Honeywell Electronic Materials</li>
+                    <li>Itron, Inc.</li>
+                    <li>Itronix Corporation</li>
+                    <li>Jubilant HollisterStier</li>
+                    <li>Spokane Steel Foundry Co</li>
+                    <li>Travis Pattern &amp; Foundry Inc</li>
+                    <li>Triumph Composite Systems</li>
+                </ul>
+                <img src="./img/industries/MAP_Manufacturing.png" alt="">
+            </div>
+
+            <div data-name="Science & Technology" class="modal">
+                <button>&#215;</button>
+                <div class="videoBox">
+                    <h2>Video comming soon</h2>
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+                <p>Industrial technology is the use of engineering and manufacturing technology to make production faster, simpler and more efficient.The industrial technology field employs creative and technically proficient individuals who can help a company achieve efficient and profitable productivity.</p>
+                <ul>
+                    <h2>Local Companies</h2>
+                    <li>Coffman Engineering Inc.</li>
+                    <li>DCI Engineers</li>
+                    <li>J-U-B Engineers Inc.</li>
+                </ul>
+                <img src="./img/industries/MAP_Science.png" alt="">
+            </div>
+
+            <div data-name="Transportation & Warehousing" class="modal">
+                <button>&#215;</button>
+                <div class="videoBox">
+                    <h2>Video comming soon</h2>
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+                <p>Transport or transportation is the movement of humans, animals and goods from one location to another. Modes of transport include air, land (rail and road), water, cable, pipeline and space. Transport is important because it enables trade between people, which is essential for the development of civilizations.</p>
+                <ul>
+                    <h2>Local Companies</h2>
+                    <li>Fast Way Freight System Inc.</li>
+                    <li>Inland Empire Distribution Systems Inc.</li>
+                    <li>Reddaway</li>
+                    <li>TDR Logistics LLC</li>
+                    <li>Trans-System Inc.</li>
+                </ul>
+                <img src="./img/industries/MAP_Transportation.png" alt="">
+            </div>
+
+        </article>
+        
+        <article id="sponsors">
+            <h2>Project Sponsors</h2>
+            <div class="grid">
+                <a href="http://chas.org/">
+                    <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_Chas%20Health.png" alt="">
+                </a>
+                <a href="https://www.hotstart.com/en/">
+                    <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_Hotstart.png" alt="">
+                </a>
+                <a href="http://www.inlandimaging.com/">
+                    <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_Inland%20Imaging.png" alt="">
+                </a>
+                <a href="https://www.mackaymfg.com/">
+                    <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_Mackay%20Manufacturing.png" alt="">
+                </a>
+                <a href="http://www.oxarc.com/">
+                    <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_Oxarc.png" alt="">
+                </a>
+                <a href="https://www.pyrotek.com/">
+                    <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_Pyrotek.png" alt="">
+                </a>
+                <a href="http://www.up.com/">
+                    <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_Union%20Pacific.png" alt="">
+                </a>
+                <a href="https://www.wagstaff.com/">
+                    <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_Wagstaff.png" alt="">
+                </a>
+                <a href="https://www.watrust.com/">
+                    <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_Washington%20Trust%20Bank.png" alt="">
+                </a>
+            </div>
+        </article>
+        
+    </body>
+    
+    <footer>
+        <a href="https://www.ksps.org">
+            <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_KSPS.png" alt="">
+        </a>
+        <a href="https://wdcspokane.com/">
+            <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_Spokane%20Workforce%20Council.png" alt="">
+        </a>
+    </footer>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/global.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/mixitup/mixitup.min.js"></script>
+    <script src="./js/careers.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+</html>
