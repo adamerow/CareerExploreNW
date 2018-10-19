@@ -32,7 +32,7 @@
 	top: -50%;
 	left: -50%;
 	z-index: -1;
-	background: url(../../img/homeBanner.jpg) center 300px;
+	background: url(../img/homeBanner.jpg) center 300px;
     background-size: auto 100%;
     box-shadow: 0 0 30px black;
     filter: blur(2px) grayscale(1);
@@ -312,7 +312,7 @@ article.hasResults
     -webkit-clip-path: polygon(0 100px, 100% 0, 100% calc(100% - 100px), 0 100%);
     clip-path: polygon(0 100px, 100% 0, 100% calc(100% - 100px), 0 100%);
     background: #434F39;
-    background-image: url(../../img/topographyGreen.png);
+    background-image: url(../img/topographyGreen.png);
     background-size: 300px;
 }
 #industries .industryCarousel
