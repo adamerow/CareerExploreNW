@@ -6,7 +6,7 @@
 
 body
 {
-    background-image: url(../../img/topographyBlue.png);
+    background-image: url(../img/topographyBlue.png);
     background-size: 300px;
 }
 
@@ -70,7 +70,7 @@ body
     max-height: 0;
     transform-origin:top;
     overflow: hidden;
-    background-image: url(../../img/topographyGreen.png);
+    background-image: url(../img/topographyGreen.png);
     background-size: 300px;
     display: flex;
     flex-wrap: wrap;
