@@ -94,7 +94,7 @@ jQuery(document).ready(function(){
             var right = $(this).find('p').offset().left + $(this).find('p').outerWidth();
             console.log(right);
 
-            if(left < 15)
+            if(left < 0)
             {
                 $(this).find('p').css(
                 {
@@ -109,7 +109,7 @@ jQuery(document).ready(function(){
                 $(this).addClass("left");
             }
 
-            if(right > $(window).width() - 15)
+            if(right > $(window).width())
             {
                 $(this).find('p').css(
                 {
