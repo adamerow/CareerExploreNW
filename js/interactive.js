@@ -101,11 +101,12 @@ jQuery(document).ready(function(){
                     "left": 0,
                     "transform": "translate(0, calc(-100% - 15px))"
                 });
-                $(this).find('p').after().css(
-                {
-                    "left": 0,
-                    "transform": "translateX(150%)"
-                });
+//                 $(this).find('p').after().css(
+//                 {
+//                     "left": 0,
+//                     "transform": "translateX(150%)"
+//                 });
+                $(this).addClass("left");
             }
 
             if(right > $(window).width() - 30)
@@ -115,7 +116,8 @@ jQuery(document).ready(function(){
                     "left": "100%",
                     "transform": "translate(-100%, calc(-100% - 15px))"
                 });
-                $(this).find('p').after().css("left", "calc(100% - 55px)");
+//                 $(this).find('p').after().css("left", "calc(100% - 55px)");
+                $(this).addClass("right");
             }
         },
         mouseleave:function()
