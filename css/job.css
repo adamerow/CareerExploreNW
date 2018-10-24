@@ -187,6 +187,15 @@ h1
     opacity: 0;
     pointer-events: none;
 }
+#Skills ul li.left .about:after
+{
+    left: 0;
+    transform: translateX(150%);
+}
+#Skills ul li.right .about:after
+{
+    left: calc(100% - 55px);
+}
 #Skills ul li .about
 {
     padding: 5px 10px;
