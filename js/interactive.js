@@ -112,7 +112,7 @@ jQuery(document).ready(function(){
             {
                 $(this).find('p').css(
                 {
-                    "left": 100%,
+                    "left": "100%",
                     "transform": "translate(-100%, calc(-100% - 15px))"
                 });
                 $(this).find('p').after().css("left", "calc(100% - 55px)");
