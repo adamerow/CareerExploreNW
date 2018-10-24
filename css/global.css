@@ -361,6 +361,11 @@ footer a img
         margin: 1.5vmin -5px;
     }
     
+    #toTop.visible
+    {
+        display: none;
+    }
+    
     footer
     {
         width: 100%;
