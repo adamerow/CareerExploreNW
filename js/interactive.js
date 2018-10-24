@@ -94,32 +94,34 @@ jQuery(document).ready(function(){
             console.log(left);
             console.log(right);
 
-            if(left < 30)
-            {
-                $(this + ' p').css(
-                {
-                    "left": 0,
-                    "transform": "translate(0, calc(-100% - 15px))"
-                });
-                $(this + ' p').after().css(
-                {
-                    "left": 0,
-                    "transform": "translateX(150%)"
-                });
-            }
+//             if(left < 30)
+//             {
+//                 $(this + ' p').css(
+//                 {
+//                     "left": 0,
+//                     "transform": "translate(0, calc(-100% - 15px))"
+//                 });
+//                 $(this + ' p').after().css(
+//                 {
+//                     "left": 0,
+//                     "transform": "translateX(150%)"
+//                 });
+//             }
 
-            if(right > $(window).width() - 30)
-            {
-                $(this + ' p').css(
-                {
-                    "left": 0,
-                    "transform": "translate(calc(-50% - 45px), calc(-100% - 15px))"
-                });
-                $(this + ' p').after().css("left", "calc(100% - 55px)");
-            }
+//             if(right > $(window).width() - 30)
+//             {
+//                 $(this + ' p').css(
+//                 {
+//                     "left": 0,
+//                     "transform": "translate(calc(-50% - 45px), calc(-100% - 15px))"
+//                 });
+//                 $(this + ' p').after().css("left", "calc(100% - 55px)");
+//             }
         },
         mouseleave:function()
-        {}
+        {
+            console.log("out");
+        }
     },'li');
     
     //open/close stats    
