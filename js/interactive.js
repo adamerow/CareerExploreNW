@@ -85,6 +85,38 @@ jQuery(document).ready(function(){
         }, 1500);
     }
     
+    $('#Skills li').hover(function()
+    {
+        var left = $(this + ' p').position().left;
+        var right = $(this + ' p').position().left + $(this + ' p').outerWidth();
+        console.log(left);
+        console.log(right);
+        
+        if(left < 30)
+        {
+            $(this + ' p').css(
+            {
+                "left": 0,
+                "transform": "translate(0, calc(-100% - 15px))"
+            });
+            $(this + ' p').after().css(
+            {
+                "left": 0,
+                "transform": "translateX(150%)"
+            });
+        }
+        
+        if(right > $(window).width() - 30)
+        {
+            $(this + ' p').css(
+            {
+                "left": 0,
+                "transform": "translate(calc(-50% - 45px), calc(-100% - 15px))"
+            });
+            $(this + ' p').after().css("left", "calc(100% - 55px)");
+        }
+    }); 
+    
     //open/close stats    
 //    $('#statTease').click(function(){
 //        $('#stats').toggleClass("stats");
