@@ -89,8 +89,8 @@ jQuery(document).ready(function(){
     {
         mouseenter: function()
         {
-            var left = $(this + ' p').position().left;
-            var right = $(this + ' p').position().left + $(this + ' p').outerWidth();
+            var left = $(this).find('p').position().left;
+            var right = $(this).find('p').position().left + $(this + ' p').outerWidth();
             console.log(left);
             console.log(right);
 
