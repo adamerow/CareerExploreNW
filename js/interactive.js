@@ -90,9 +90,7 @@ jQuery(document).ready(function(){
         mouseenter: function()
         {
             var left = $(this).find('p').offset().left;
-            console.log(left);
             var right = $(this).find('p').offset().left + $(this).find('p').outerWidth();
-            console.log(right);
 
             if(left < 0)
             {
@@ -121,9 +119,7 @@ jQuery(document).ready(function(){
             }
         },
         mouseleave:function()
-        {
-            console.log("out");
-        }
+        {}
     },'li');
     
     //open/close stats    
