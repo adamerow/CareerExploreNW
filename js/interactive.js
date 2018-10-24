@@ -85,7 +85,8 @@ jQuery(document).ready(function(){
         }, 1500);
     }
     
-    $('#Skills')on({
+    $('#Skills').on(
+    {
         mouseenter: function()
         {
             var left = $(this + ' p').position().left;
