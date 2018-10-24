@@ -89,9 +89,9 @@ jQuery(document).ready(function(){
     {
         mouseenter: function()
         {
-            var left = $(this).find('p').position().left;
+            var left = $(this).find('p').offset().left;
             console.log(left);
-            var right = $(this).find('p').position().left + $(this).find('p').outerWidth();
+            var right = $(this).find('p').offset().left + $(this).find('p').outerWidth();
             console.log(right);
 
 //             if(left < 30)
