@@ -85,7 +85,7 @@ jQuery(document).ready(function(){
         }, 1500);
     }
     
-    $('#Skills li').hover(function()
+    $('#Skills li').hover(function(event)
     {
         var left = $(this + ' p').position().left;
         var right = $(this + ' p').position().left + $(this + ' p').outerWidth();
@@ -115,7 +115,8 @@ jQuery(document).ready(function(){
             });
             $(this + ' p').after().css("left", "calc(100% - 55px)");
         }
-    }); 
+    },
+    function(event){}); 
     
     //open/close stats    
 //    $('#statTease').click(function(){
