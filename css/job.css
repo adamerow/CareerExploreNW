@@ -432,6 +432,11 @@ h1
         width: 100%;
     }
     
+    #Skills ul li .about
+    {
+        width: 200px;
+    }
+    
     #links
     {
         grid-template-columns: 100%;
