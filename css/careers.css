@@ -219,8 +219,7 @@ article.hasResults
     left: -50%;
     right: -50%;
     margin: 0 auto;
-    filter: blur(1px) grayscale(1);
-    opacity: .4;
+    opacity: .6;
     z-index: 0;
 }
 
