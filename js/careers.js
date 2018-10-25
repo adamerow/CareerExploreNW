@@ -218,11 +218,16 @@ function showResults(data)
         var teaser = "./img/teasers/" + data[x].Name + ".jpg";//"url to image..." + data[x].Name;
         var industry = data[x].Sector;
         var link = data[x].PageURL;
+        var jobSpan;
         
         if(data.VideoEmbed != "")
         {
-            var jobSpan = job + ' <span class="play">&#9654;</span>';
-        } 
+            jobSpan = job + ' <span class="play">&#9654;</span>';
+        }
+        else
+        {
+            jobSpan = job;
+        }
         
         var skills = data[x].Skills.split(',');
         var temp = " ";
