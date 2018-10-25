@@ -174,7 +174,7 @@ article.hasResults
 }
 
 /* flip on hover */
-.result:hover .flip, .result.hover .flip,
+.result:hover .flip, .result.hover .flip
 {
     transform: rotateY(180deg);
 }
