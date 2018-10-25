@@ -233,7 +233,7 @@ function showResults(data)
         skills = temp;
         
         //add object to results
-        var newResult = '<div data-name="' + job.toLowerCase() + '" class="result mix ' + skills + '"  ontouchstart="this.classList.toggle(' + "'hover'" + ');"><div class="flip"><div class="front"><h3 class="JobTitle">' + job + '</h3><img src="' + teaser + '"></div><div class="back"><a href="' + link + '"><h3 class="JobTitle">' + job + '</h3><p class="industry">' + industry + '</p></a></div></div></div>';
+        var newResult = '<div data-name="' + job.toLowerCase() + '" class="result mix ' + skills + '"  ontouchstart="this.classList.toggle(' + "'hover'" + ');"><div><a href="' + link + '"><img src="' + teaser + '"></a></div><p class="JobTitle">' + jobTitle + '</p></div>';
         
         $('#results').append(newResult);
     }
