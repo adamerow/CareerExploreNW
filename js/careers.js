@@ -237,6 +237,9 @@ function showResults(data)
         }
         skills = temp;
         
+        console.log(data.VideoEmbed);
+        console.log(jobSpan);
+        
         //add object to results
         var newResult = '<div data-name="' + job.toLowerCase() + '" class="result mix ' + skills + '"  ontouchstart="this.classList.toggle(' + "'hover'" + ');"><div><a href="' + link + '"><img src="' + teaser + '"></a></div><p class="JobTitle">' + jobSpan + '</p></div>';
         
