@@ -221,7 +221,7 @@ function showResults(data)
         
         if(data.VideoEmbed != "")
         {
-            job = job + ' <span class="play">&#9654;</span>';
+            var jobSpan = job + ' <span class="play">&#9654;</span>';
         } 
         
         var skills = data[x].Skills.split(',');
@@ -233,7 +233,7 @@ function showResults(data)
         skills = temp;
         
         //add object to results
-        var newResult = '<div data-name="' + job.toLowerCase() + '" class="result mix ' + skills + '"  ontouchstart="this.classList.toggle(' + "'hover'" + ');"><div><a href="' + link + '"><img src="' + teaser + '"></a></div><p class="JobTitle">' + job + '</p></div>';
+        var newResult = '<div data-name="' + job.toLowerCase() + '" class="result mix ' + skills + '"  ontouchstart="this.classList.toggle(' + "'hover'" + ');"><div><a href="' + link + '"><img src="' + teaser + '"></a></div><p class="JobTitle">' + jobSpan + '</p></div>';
         
         $('#results').append(newResult);
     }
