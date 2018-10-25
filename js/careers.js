@@ -220,7 +220,7 @@ function showResults(data)
         var link = data[x].PageURL;
         var jobSpan;
         
-        if(data.VideoEmbed != "")
+        if(data[x].VideoEmbed != "")
         {
             jobSpan = job + ' <span class="play">&#9654;</span>';
         }
@@ -237,7 +237,7 @@ function showResults(data)
         }
         skills = temp;
         
-        console.log(data.VideoEmbed);
+        console.log(data[x].VideoEmbed);
         console.log(jobSpan);
         
         //add object to results
