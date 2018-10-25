@@ -174,7 +174,7 @@ article.hasResults
 }
 
 /* flip on hover */
-.result:hover .flip, .result.hover .flip
+.result:hover .flip, .result.hover .flip,
 {
     transform: rotateY(180deg);
 }
@@ -219,6 +219,8 @@ article.hasResults
     left: -50%;
     right: -50%;
     margin: 0 auto;
+    filter: blur(1px) grayscale(1);
+    opacity: .4;
     z-index: 0;
 }
 
