@@ -605,7 +605,7 @@ article.hasResults
 }
 .job p, .result p
 {
-    width: calc(100%);
+    width: calc(100% - 30px);
     text-align: center;
     margin: 0 auto;
     margin-top: 15px;
