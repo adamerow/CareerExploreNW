@@ -219,7 +219,7 @@ function showResults(data)
         var industry = data[x].Sector;
         var link = data[x].PageURL;
         
-        if(tempData.VideoEmbed != "")
+        if(data.VideoEmbed != "")
         {
             job = job + ' <span class="play">&#9654;</span>';
         } 
