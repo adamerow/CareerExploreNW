@@ -219,6 +219,11 @@ function showResults(data)
         var industry = data[x].Sector;
         var link = data[x].PageURL;
         
+        if(tempData.VideoEmbed != "")
+        {
+            job = job + ' <span class="play">&#9654;</span>';
+        } 
+        
         var skills = data[x].Skills.split(',');
         var temp = " ";
         for(var y = 0; y < skills.length; y++)
