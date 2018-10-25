@@ -166,8 +166,7 @@ article.hasResults
 }
 #results .result
 {
-    width: 245px;
-    height: 245px;
+    max-width: 245px;
     position: relative;
     z-index: 2;
     perspective: 1000px;
@@ -579,14 +578,14 @@ article.hasResults
     justify-items: center;
 }
 
-.job
+.job, .result
 {
     min-width: 150px;
     width: calc(100%);
     height: auto;
     position: relative;
 }
-.job div
+.job div, .result div
 {
 /*
     width: 245px;
@@ -604,14 +603,14 @@ article.hasResults
     cursor: pointer;
     backface-visibility: hidden;
 }
-.job p
+.job p, .result p
 {
     width: calc(100%);
     text-align: center;
     margin: 0 auto;
     margin-top: 15px;
 }
-.job div img
+.job div img, .result div img
 {
     height: 100%;
     display: table-cell;
