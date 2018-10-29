@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Apprenticeships</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+        
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/education.css">
+    </head>
+    
+    <header>
+        <a href="./index.html" id="logoContainer">
+            <button id="logo">
+                <img src="img/CareerExploreLogo.svg" alt="CareerExploreNW">
+            </button>
+        </a>
+        <div id="nav-bar">
+            <a href="/education.html">
+                <img src="./img/icons/ICONS_MENU_Education.png" alt="">
+            </a>
+            <a href="/about.html">
+                <img src="./img/icons/ICONS_MENU_About.png" alt="">
+            </a>
+            <div>
+                <span href="#" id="hamburger">
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </header>
+     
+    <body>
+      
+        <div id="pageCover">
+            <div class="white"></div>
+            <div class="green"></div>
+        </div>
+       
+        <button onclick="topFunction()" id="toTop">&#8743;</button>
+                    
+        <article id="links">
+           
+            <div class="result"  ontouchstart="this.classList.toggle(' + "'hover'" + ');">
+                <a href="https://scc.spokane.edu/Become-a-Student/Apprenticeships">
+                    <div class="front">    
+                        <p>CCS Apprenticeships</p>
+                    </div>    
+                </a>
+            </div>
+            
+            <div class="result"  ontouchstart="this.classList.toggle(' + "'hover'" + ');">
+                <a href="https://www.lni.wa.gov/TradesLicensing/Apprenticeship/">
+                    <div class="front">
+                        <p>Labor &amp; Industries Apprenticeships</p>
+                    </div>
+                </a>
+            </div>
+            
+            <style>
+                .result a p
+                {
+                    text-align: center;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    transform: translateY(-50%);
+                }
+            </style>
+            
+        </article>
+        
+    </body>
+    
+    <footer>
+        <a href="https://www.ksps.org">
+            <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_KSPS.png" alt="">
+        </a>
+        <a href="https://wdcspokane.com/">
+            <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_Spokane%20Workforce%20Council.png" alt="">
+        </a>
+    </footer>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/global.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    
+    <script>
+        //OPEN PAGE
+        window.setTimeout(function()
+        {
+            $('#pageCover').addClass("openPage");
+        }, 1000);
+
+    </script>
+</html>
