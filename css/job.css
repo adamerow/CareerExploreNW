@@ -37,15 +37,15 @@ hr
 }
 #greenClip .clip
 {
-    width: 800px;
+    width: 400px;
     height: 400px;
     position: absolute;
-    left: -400px;
+    top: 0;
+    left: 0;
     background-image: url(../img/topographyGreen.png);
     background-size: 300px;
-    background-position: left bottom;
-    -webkit-clip-path: polygon(100% 0, 50% 100%, 0 100%, 0 0);
-    clip-path: polygon(100% 0, 50% 100%, 0 100%, 0 0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
 .blueClip
@@ -186,15 +186,6 @@ h1
     text-align: center;
     opacity: 0;
     pointer-events: none;
-}
-#Skills ul li.left .about:after
-{
-    left: 0;
-    transform: translateX(150%);
-}
-#Skills ul li.right .about:after
-{
-    left: calc(100% - 55px);
 }
 #Skills ul li .about
 {
@@ -354,6 +345,17 @@ h1
     width: 100%;
 }
 
+#map
+{
+    width: 80%;
+    height: 300px;
+}
+#map iframe
+{
+    width: 100%;
+    height: 100%;
+}
+
 /*    LINKS    */
 
 #links
@@ -488,10 +490,8 @@ h1
     
     #greenClip .clip
     {
-        width: 100vw;
+        width: 50vw;
         height: 50vw;
-        position: absolute;
-        left: -50vw;
     }
     #greenLines
     {
@@ -635,7 +635,6 @@ h1
 #video-container #teaser.open
 {
     opacity: 0;
-    transition-delay: .25s;
 }
 
 #video-container iframe.open
