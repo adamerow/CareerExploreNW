@@ -189,7 +189,7 @@ function fillIndustries(data, tabletop)
             
             if(tempData.VideoEmbed != "")
             {
-                jobTitle = jobTitle + ' <span class="play">&#9654;</span>';
+                jobTitle = jobTitle + ' <span class="play">&#x25BA;</span>';
             } 
             
             var teaser = "./img/teasers/" + tempData.Name + ".jpg";//"url to image..." + tempData.Name;
@@ -222,7 +222,7 @@ function showResults(data)
         
         if(data[x].VideoEmbed != "")
         {
-            jobSpan = job + ' <span class="play">&#9654;</span>';
+            jobSpan = job + ' <span class="play">&#x25BA;</span>';
         }
         
         var skills = data[x].Skills.split(',');
