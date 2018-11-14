@@ -89,33 +89,33 @@ jQuery(document).ready(function(){
     {
         mouseenter: function()
         {
-            var left = $(this).find('p').offset().left;
-            var right = $(this).find('p').offset().left + $(this).find('p').outerWidth();
+            var left = $(this + ' p').position().left;
+            var right = $(this + ' p').position().left + $(this + ' p').outerWidth();
+            console.log(left);
+            console.log(right);
 
-            if(left < 0)
+            if(left < 30)
             {
-                $(this).find('p').css(
+                $(this + ' p').css(
                 {
                     "left": 0,
                     "transform": "translate(0, calc(-100% - 15px))"
                 });
-//                 $(this).find('p').after().css(
-//                 {
-//                     "left": 0,
-//                     "transform": "translateX(150%)"
-//                 });
-                $(this).addClass("left");
+                $(this + ' p').after().css(
+                {
+                    "left": 0,
+                    "transform": "translateX(150%)"
+                });
             }
 
-            if(right > $(window).width())
+            if(right > $(window).width() - 30)
             {
-                $(this).find('p').css(
+                $(this + ' p').css(
                 {
-                    "left": "100%",
-                    "transform": "translate(-100%, calc(-100% - 15px))"
+                    "left": 0,
+                    "transform": "translate(calc(-50% - 45px), calc(-100% - 15px))"
                 });
-//                 $(this).find('p').after().css("left", "calc(100% - 55px)");
-                $(this).addClass("right");
+                $(this + ' p').after().css("left", "calc(100% - 55px)");
             }
         },
         mouseleave:function()

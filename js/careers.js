@@ -23,18 +23,18 @@ jQuery(document).ready(function(){
             },
             callbacks:
             {
-                onMixEnd: function(state, futureState)
-                {
-                    if(mixer.getState().totalShow < 1)
-                    {
-                        $('#results').removeClass("hasResults");
-                    }
-                    else
-                    {
-                        $('#results').addClass("hasResults");
-                        $('#results .result').addClass("visible");
-                    }
-                }
+//                onMixEnd: function(state, futureState)
+//                {
+//                    if(mixer.getState().totalShow < 1)
+//                    {
+//                        $('#results').removeClass("hasResults");
+//                    }
+//                    else
+//                    {
+//                        $('#results').addClass("hasResults");
+//                        $('#results .result').addClass("visible");
+//                    }
+//                }
             }
         });
         
@@ -58,6 +58,7 @@ jQuery(document).ready(function(){
             }
             
             $('#filter button').removeClass("mixitup-control-active");
+            $('.videos input').prop('checked', false);
         });
     });
     
@@ -104,11 +105,35 @@ jQuery(document).ready(function(){
         ]
     });
     
+    // CREATE SPOTLIGHT CAROUSEL
+    $('.spotlightCarousel').slick({
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive:
+        [
+            {
+                breakpoint: 499,
+                settings:
+                {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    
     //CREATE JOBS CAROUSEL
     $('.jobsCarousel').slick({
         dots: false,
         arrows: false,
         slidesToShow: 1,
+        autoplay: false,
         slidesToScroll: 1,
         asNavFor: '.industryCarousel'
     });
@@ -189,7 +214,7 @@ function fillIndustries(data, tabletop)
             
             if(tempData.VideoEmbed != "")
             {
-                jobTitle = jobTitle + ' <span class="play">&#x25BA;</span>';
+                jobTitle = jobTitle + ' <span class="play">&#9654;</span>';
             } 
             
             var teaser = "./img/teasers/" + tempData.Name + ".jpg";//"url to image..." + tempData.Name;
@@ -215,16 +240,11 @@ function showResults(data)
     {
         //pull stats from data object
         var job = data[x].Name;
+        var jobSpan = job;
         var teaser = "./img/teasers/" + data[x].Name + ".jpg";//"url to image..." + data[x].Name;
         var industry = data[x].Sector;
         var link = data[x].PageURL;
-        var jobSpan = job;
-        
-        if(data[x].VideoEmbed != "")
-        {
-            jobSpan = job + ' <span class="play">&#x25BA;</span>';
-        }
-        
+                
         var skills = data[x].Skills.split(',');
         var temp = " ";
         for(var y = 0; y < skills.length; y++)
@@ -232,6 +252,13 @@ function showResults(data)
             temp = temp + skills[y] + " ";
         }
         skills = temp;
+        
+         if(data[x].VideoEmbed != "")
+        {
+            jobSpan = job + ' <span class="play">&#9654;</span>';
+            
+            skills = skills + " video";
+        } 
         
         //add object to results
         var newResult = '<div data-name="' + job.toLowerCase() + '" class="result mix ' + skills + '"  ontouchstart="this.classList.toggle(' + "'hover'" + ');"><div><a href="' + link + '"><img src="' + teaser + '"></a></div><p class="JobTitle">' + jobSpan + '</p></div>';

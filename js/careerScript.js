@@ -45,7 +45,7 @@ var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1FEXimj96l400
 
 jQuery(document).ready(function(){
     
-    //load data
+    // load data
     init();
     
 });

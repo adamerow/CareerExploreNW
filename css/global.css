@@ -86,11 +86,12 @@ body
     margin: 0;
     min-height: 100vh;
     position: relative;
-    overflow-x: hidden;
-    background: #253E5E;
-    background-image: url(../img/topographyBlue.png);
-    background-size: 300px;
-    padding-bottom: 30px;
+/*    overflow-x: hidden;*/
+/*    background: #253E5E;*/
+/*    background-image: url(../img/topographyBlue.png);*/
+    background-size: 400px;
+    background-image: url(../img/topographyHigh.png);
+/*    padding-bottom: 30px;*/
 }
 .stop
 {
@@ -112,7 +113,7 @@ body *
 header
 {
     height: 60px;
-    width: calc(100vw - 60px);
+    width: calc(100% - 60px);
     background: #fff;
     z-index: 10; 
     position: fixed;
@@ -149,8 +150,8 @@ header #logoContainer
 {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 260px;
+    right: 65px;
+/*    width: 260px;*/
     height: 60px;
     overflow: hidden;
     display: -webkit-flex;
@@ -160,30 +161,46 @@ header #logoContainer
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
-}
-#nav-bar div
-{
-    width: 60px;
+    align-items: center;
 }
 #nav-bar a
 {
-    width: 40px;
+    color: #000;
+    text-align: center;
     opacity: 0;
     padding: 5px;
+    margin: 0 15px;
     position: relative;
     transform: scale(0);
 }
-#nav-bar a img
+#nav-bar a:after
 {
-    width: calc(100% - 10px);
+    content: '';
+    width: 0;
+    height: 2px;
+    background: black;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: 0 auto;
+    transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+}
+#nav-bar a:hover:after
+{
+    width: 100%;
 }
 .open-nav a
 {
     opacity: 1 !important;
     transform: scale(1) !important;
+}
+
+#hamburger-wrap
+{
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 
@@ -253,7 +270,7 @@ footer
 {
     height: 40px;
     padding: 10px 15px;
-    background: #586742;
+    background: #4994D0;
     z-index: 10; 
     position: fixed;
     left: 0;
@@ -307,7 +324,7 @@ footer a img
 
 #pageCover /* default closed */
 {
-    width: 100vw;
+/*    width: 100vw;*/
     position: absolute;
     z-index: 20;
     top: 0;
@@ -343,14 +360,14 @@ footer a img
 
 @media (max-width: 499px)
 {
+    h1
+    {
+        font-size: 1.25em;
+    }
+    
     #nav-bar
     {
         width: calc(100% - 60px);
-    }
-    #nav-bar a
-    {
-        width: calc((100% - 65px) / 3);
-        max-width: 50px;
     }
     #nav-bar div
     {
@@ -368,14 +385,62 @@ footer a img
     
     footer
     {
-        width: 100%;
+        width: 100vw;
         padding: 10px 0;
     }
 }
-@media (max-width: 699px)
+@media (max-width: 599px)
 {
+    #nav-bar
+    {
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: 0;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background: whitesmoke;
+        box-shadow: inset 0 5px 10px lightgray;
+    }
+    #nav-bar.open-nav
+    {
+        height: 180px;
+    }
+    
+    
+    
     #logo
     {
         width: 50px;
+    }
+    
+    footer .logoText
+    {
+        display: none;
+    }
+}
+@media (max-width: 699px) and (min-width: 500px)
+{
+    h1
+    {
+        font-size: 2.5em;
+    }
+    
+    #logo
+    {
+        width: 50px;
+    }
+    
+    footer .logoText
+    {
+        display: none;
+    }
+}
+@media (max-width: 899px) and (min-width: 700px)
+{
+    h1
+    {
+        font-size: 3.25em;
     }
 }

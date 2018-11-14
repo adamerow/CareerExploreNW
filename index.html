@@ -23,13 +23,16 @@
         </a>
         <div id="nav-bar">
             <a href="/apprentice.html">
-                <img src="./img/icons/ICONS_MENU_Apprentice.png" alt="">
+<!--                <img src="./img/icons/ICONS_MENU_Apprentice.png" alt="">-->
+                Apprenticeships
             </a>
             <a href="/education.html">
-                <img src="./img/icons/ICONS_MENU_Education.png" alt="">
+<!--                <img src="./img/icons/ICONS_MENU_Education.png" alt="">-->
+                Education
             </a>
             <a href="/about.html">
-                <img src="./img/icons/ICONS_MENU_About.png" alt="">
+<!--                <img src="./img/icons/ICONS_MENU_About.png" alt="">-->
+                About
             </a>
             <div>
                 <span id="hamburger">
@@ -46,23 +49,77 @@
             <div class="green"></div>
         </div>
         
-        <button onclick="topFunction()" id="toTop">&#8743;</button>
+<!--        <button onclick="topFunction()" id="toTop">&#8743;</button>-->
+      
+        <article id="spotlight">
+            
+            <div class="spotlightCarousel">
+                                             
+                <div data-name="production supervisor" class="spot">
+                    <div>
+                        <a href="https://adamerow.github.io/careerexplorenw/careers/Production_Supervisor.html">
+                            <img src="./img/teasers/Production Supervisor.jpg">
+                        </a>
+                    </div>
+                    <p class="JobTitle">Production Supervisor <span class="play">▶</span></p>
+                </div>
+                                             
+                <div data-name="production supervisor" class="spot">
+                    <div>
+                        <a href="https://adamerow.github.io/careerexplorenw/careers/Production_Supervisor.html">
+                            <img src="./img/teasers/Production Supervisor.jpg">
+                        </a>
+                    </div>
+                    <p class="JobTitle">Production Supervisor <span class="play">▶</span></p>
+                </div>
+                                             
+                <div data-name="production supervisor" class="spot">
+                    <div>
+                        <a href="https://adamerow.github.io/careerexplorenw/careers/Production_Supervisor.html">
+                            <img src="./img/teasers/Production Supervisor.jpg">
+                        </a>
+                    </div>
+                    <p class="JobTitle">Production Supervisor <span class="play">▶</span></p>
+                </div>
+                                             
+                <div data-name="production supervisor" class="spot">
+                    <div>
+                        <a href="https://adamerow.github.io/careerexplorenw/careers/Production_Supervisor.html">
+                            <img src="./img/teasers/Production Supervisor.jpg">
+                        </a>
+                    </div>
+                    <p class="JobTitle">Production Supervisor <span class="play">▶</span></p>
+                </div>
+                                             
+                <div data-name="production supervisor" class="spot">
+                    <div>
+                        <a href="https://adamerow.github.io/careerexplorenw/careers/Production_Supervisor.html">
+                            <img src="./img/teasers/Production Supervisor.jpg">
+                        </a>
+                    </div>
+                    <p class="JobTitle">Production Supervisor <span class="play">▶</span></p>
+                </div>
+                
+            </div>
+            
+        </article>
        
         <article id="searchSort">
             
             <div id="searchBG"></div>
-           
+
             <h1>Start your journey</h1>
             <div class="forms">
                 <form id="search">
                     <h2>Search by job title</h2>
-                    <input type="text" data-ref="input-search" placeholder="&#9906; Search by job title">
+                    <input type="text" data-ref="input-search" placeholder="Search by job title">
                 </form>
 
                 <form id="filter">
                     <h2>Search by skill</h2>
                     <div class="buttons">
-                        <button type="button" data-filter="all">View all</button>
+                        <button type="button" data-filter="all" class="large">View all</button>
+                        <button type="button" data-toggle=".video" class="large">Videos only</button>
                         <button type="button" data-toggle=".AttentionToDetail">Attention To Detail</button>
                         <button type="button" data-toggle=".ComputerSkills">Computer Skills</button>
                         <button type="button" data-toggle=".Language">Language</button>
@@ -80,12 +137,22 @@
                         <button type="button" data-toggle=".WrittenCommunication">Written Communication</button>
                     </div>
                 </form>
+                
+<!--
+                <form action="" class="videos">
+                    <label>
+                        <input type="checkbox" data-toggle=".video">
+                        <h2>Videos only</h2>
+                        <div class="check"></div>
+                    </label>
+                </form>
+-->
+                
+                
             </div>
         </article>
         
-        <article id="results" class="mixContainer">
-        
-        </article>
+        <article id="results" class="mixContainer"></article>
         
         <article id="industries">
            
@@ -93,36 +160,12 @@
             
             <div class="industryCarousel">
                
-                <div data-name="Agriculture" class="industry">
+                <div data-name="Manufacturing" class="industry">
                     <div>
-<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
-                        <img class="teaserImg" src="https://media.istockphoto.com/photos/couple-carefully-maintaining-farm-plot-together-picture-id923225992?s=2048x2048">
+                        <span class="play">&#9654;</span>
+                        <img class="teaserImg" src="https://media.istockphoto.com/photos/mechanic-and-female-engineer-talking-in-factory-picture-id841574354?s=2048x2048">
                     </div>
-                    <p>Agriculture</p>
-                </div>
-               
-                <div data-name="Architecture & Construction" class="industry">
-                    <div>
-<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
-                        <img class="teaserImg" src="https://media.istockphoto.com/photos/architect-and-construction-worker-with-plans-tablet-pc-and-laptop-picture-id535164659?s=2048x2048">
-                    </div>
-                    <p>Architecture &amp; Construction</p>
-                </div>
-               
-                <div data-name="Community & Nonprofit" class="industry">
-                    <div>
-<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
-                        <img class="teaserImg" src="https://media.istockphoto.com/photos/sorting-non-perishable-foods-picture-id598937120?s=2048x2048">
-                    </div>
-                    <p>Community &amp; Nonprofit</p>
-                </div>
-               
-                <div data-name="Finance & Insurance" class="industry">
-                    <div>
-<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
-                        <img class="teaserImg" src="https://media.istockphoto.com/photos/african-business-people-working-late-picture-id531046181?s=2048x2048">
-                    </div>
-                    <p>Finance &amp; Insurance</p>
+                    <p>Manufacturing</p>
                 </div>
                
                 <div data-name="Healthcare & Social Assistance" class="industry">
@@ -133,12 +176,28 @@
                     <p>Healthcare &amp; Social Assistance</p>
                 </div>
                
-                <div data-name="Manufacturing" class="industry">
+                <div data-name="Architecture & Construction" class="industry">
                     <div>
-                        <span class="play">&#9654;</span>
-                        <img class="teaserImg" src="https://media.istockphoto.com/photos/mechanic-and-female-engineer-talking-in-factory-picture-id841574354?s=2048x2048">
+<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
+                        <img class="teaserImg" src="https://media.istockphoto.com/photos/architect-and-construction-worker-with-plans-tablet-pc-and-laptop-picture-id535164659?s=2048x2048">
                     </div>
-                    <p>Manufacturing</p>
+                    <p>Architecture &amp; Construction</p>
+                </div>
+               
+                <div data-name="Transportation & Warehousing" class="industry">
+                    <div>
+<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
+                        <img class="teaserImg" src="https://media.istockphoto.com/photos/getting-containers-loaded-for-shipment-picture-id647578378?s=2048x2048">
+                    </div>
+                    <p>Transportation &amp; Warehousing</p>
+                </div>
+               
+                <div data-name="Finance & Insurance" class="industry">
+                    <div>
+<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
+                        <img class="teaserImg" src="https://media.istockphoto.com/photos/african-business-people-working-late-picture-id531046181?s=2048x2048">
+                    </div>
+                    <p>Finance &amp; Insurance</p>
                 </div>
                
                 <div data-name="Science & Technology" class="industry">
@@ -149,66 +208,80 @@
                     <p>Science &amp; Technology</p>
                 </div>
                
-                <div data-name="Transportation & Warehousing" class="industry">
+                <div data-name="Agriculture" class="industry">
                     <div>
 <!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
-                        <img class="teaserImg" src="https://media.istockphoto.com/photos/getting-containers-loaded-for-shipment-picture-id647578378?s=2048x2048">
+                        <img class="teaserImg" src="https://media.istockphoto.com/photos/couple-carefully-maintaining-farm-plot-together-picture-id923225992?s=2048x2048">
                     </div>
-                    <p>Transportation &amp; Warehousing</p>
+                    <p>Agriculture</p>
+                </div>
+               
+                <div data-name="Community & Nonprofit" class="industry">
+                    <div>
+<!--                        <img class="videoIcon" src="./img/icons/ICONS_MENU_Video.png" alt="">-->
+                        <img class="teaserImg" src="https://media.istockphoto.com/photos/sorting-non-perishable-foods-picture-id598937120?s=2048x2048">
+                    </div>
+                    <p>Community &amp; Nonprofit</p>
                 </div>
                                 
             </div>
             
+        </article>
+        
+        <article id="jobs">
+        
             <div class="jobsCarousel">
-            
-                <div data-name="Agriculture" class="industryJobs">
-                    <h2>Agriculture</h2>
-                    <div class="jobGrid"></div>        
-                </div>
                 
-                <div data-name="Architecture & Construction" class="industryJobs">
-                    <h2>Architecture &amp; Construction</h2>
-                    <div class="jobGrid"></div>        
-                </div>
-                
-                <div data-name="Community & Nonprofit" class="industryJobs">
-                    <h2>Community &amp; Nonprofit</h2>
-                    <div class="jobGrid"></div>        
-                </div>
-                
-                <div data-name="Finance & Insurance" class="industryJobs">
-                    <h2>Finance &amp; Insurance</h2>
+                <div data-name="Manufacturing" class="industryJobs">
+<!--                    <h2>Manufacturing</h2>-->
                     <div class="jobGrid"></div>        
                 </div>
                 
                 <div data-name="Healthcare & Social Assistance" class="industryJobs">
-                    <h2>Healthcare &amp; Social Assistance</h2>
+<!--                    <h2>Healthcare &amp; Social Assistance</h2>-->
                     <div class="jobGrid"></div>        
                 </div>
                 
-                <div data-name="Manufacturing" class="industryJobs">
-                    <h2>Manufacturing</h2>
+                <div data-name="Architecture & Construction" class="industryJobs">
+<!--                    <h2>Architecture &amp; Construction</h2>-->
+                    <div class="jobGrid"></div>        
+                </div>
+
+                
+                <div data-name="Transportation & Warehousing" class="industryJobs">
+<!--                    <h2>Transportation &amp; Warehousing</h2>-->
+                    <div class="jobGrid"></div>        
+                </div>
+                
+                <div data-name="Finance & Insurance" class="industryJobs">
+<!--                    <h2>Finance &amp; Insurance</h2>-->
                     <div class="jobGrid"></div>        
                 </div>
                 
                 <div data-name="Science & Technology" class="industryJobs">
-                    <h2>Science &amp; Technology</h2>
+<!--                    <h2>Science &amp; Technology</h2>-->
+                    <div class="jobGrid"></div>        
+                </div>
+            
+                <div data-name="Agriculture" class="industryJobs">
+<!--                    <h2>Agriculture</h2>-->
                     <div class="jobGrid"></div>        
                 </div>
                 
-                <div data-name="Transportation & Warehousing" class="industryJobs">
-                    <h2>Transportation &amp; Warehousing</h2>
+                <div data-name="Community & Nonprofit" class="industryJobs">
+<!--                    <h2>Community &amp; Nonprofit</h2>-->
                     <div class="jobGrid"></div>        
                 </div>
                 
             </div>
-            
+        
         </article>
         
         <article class="industryModals">
                
             <div data-name="Agriculture" class="modal">
                 <button>&#215;</button>
+                <h2 class="title">Agriculture</h2>
                 <div class="videoBox">
                     <h2>Video comming soon</h2>
                     <iframe src="" frameborder="0"></iframe>
@@ -225,6 +298,7 @@
             </div>
 
             <div data-name="Architecture & Construction" class="modal">
+                <h2 class="title">Architecture &amp; Construction</h2>
                 <button>&#215;</button>
                 <div class="videoBox">
                     <h2>Video comming soon</h2>
@@ -244,6 +318,7 @@
 
             <div data-name="Community & Nonprofit" class="modal">
                 <button>&#215;</button>
+                <h2 class="title">Community &amp; Nonprofit</h2>
                 <div class="videoBox">
                     <h2>Video comming soon</h2>
                     <iframe src="" frameborder="0"></iframe>
@@ -261,6 +336,7 @@
 
             <div data-name="Finance & Insurance" class="modal">
                 <button>&#215;</button>
+                <h2 class="title">Finance &amp; Insurance</h2>
                 <div class="videoBox">
                     <h2>Video comming soon</h2>
                     <iframe src="" frameborder="0"></iframe>
@@ -278,6 +354,7 @@
             </div>
 
             <div data-name="Healthcare & Social Assistance" class="modal">
+                <h2 class="title">Healthcare &amp; Social Assistance</h2>
                 <button>&#215;</button>
                 <div class="videoBox">
                     <h2>Video comming soon</h2>
@@ -297,6 +374,7 @@
 
             <div data-name="Manufacturing" class="modal">
                 <button>&#215;</button>
+                <h2 class="title">Manufacturing</h2>
                 <div class="videoBox">
                     <h2>Video comming soon</h2>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/H_NHfGX3jdc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -323,6 +401,7 @@
 
             <div data-name="Science & Technology" class="modal">
                 <button>&#215;</button>
+                <h2 class="title">Science &amp; Technology</h2>
                 <div class="videoBox">
                     <h2>Video comming soon</h2>
                     <iframe src="" frameborder="0"></iframe>
@@ -338,6 +417,7 @@
             </div>
 
             <div data-name="Transportation & Warehousing" class="modal">
+                <h2 class="title">Transportation &amp; Warehousing</h2>
                 <button>&#215;</button>
                 <div class="videoBox">
                     <h2>Video comming soon</h2>
@@ -358,6 +438,7 @@
         </article>
         
         <article id="sponsors">
+            <div class="bg"></div>
             <h2>Project Sponsors</h2>
             <div class="grid">
                 <a href="http://chas.org/">
