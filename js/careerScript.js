@@ -63,8 +63,6 @@ function runjobs()
     var jobName = $("title").text();
     //separate selected row
     var row = jobs.filter(x => x.Name === jobName)[0];
-    
-    console.log(row);
 
     //display job name
     $("#JobTitle").text(row.Name);
