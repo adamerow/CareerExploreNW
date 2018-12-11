@@ -22,7 +22,7 @@ $(document).bind('complete', function()
 //        console.log(sponsors);
         
         runjobs();
-    }, 10);
+    }, 100);
     
     // SCROLL TO VIDEO
     $(document).on('click', '#videoButton', function()
