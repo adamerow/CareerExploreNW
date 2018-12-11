@@ -1,67 +1,66 @@
+$(document).bind('complete', function()
+{
+    console.log(jobs);
 
-jQuery(document).ready(function(){
+    console.log(sponsors);
+
+    showResults(jobs);
+
+    fillIndustries(jobs);
+
+    fillSpot(jobs);
     
-    var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1FEXimj96l4009FsR653pp0DhKX2Oc_vs4aqUErjwg-4/edit?usp=sharing';
-    var table = null;
-    
-    //CREATE TABLE
-    function createData(sheetURL)
+    // CREATE SPOTLIGHT CAROUSEL
+    $('.spotlightCarousel').slick({
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 5000
+    });
+
+    // CREATE INDUSTY CAROUSEL
+    $('.industryCarousel').slick(
     {
-        Tabletop.init(
-        { 
-            key: sheetURL,
-            callback: function(data, tabletop)
-            { 
-                //remove description row
-                data.splice(0,1);
-                console.log(data);
+        dots: true,
+        vertical: false,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000
+    });
 
-                showResults(data);
-                
-                fillIndustries(data);
-                
-                fillSpot(data);
-        
-                $(document).trigger('complete');
-            },
-            simpleSheet: true
-        });
-    }
-        
-    createData(publicSpreadsheetUrl);
-    $(document).bind('complete', function()
+    //SET SEARCH/FILTER
+    var mixer = mixitup('#search .results',
     {
-        
-
-        // CREATE SPOTLIGHT CAROUSEL
-        $('.spotlightCarousel').slick({
-            dots: true,
-            centerMode: true,
-            focusOnSelect: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            fade: true,
-            autoplay: true,
-            autoplaySpeed: 5000
-        });
-
-        //SET SEARCH/FILTER
-        var mixer = mixitup('#search .results',
+        load: {
+            filter: 'none'
+        },
+        animation:
         {
-            load: {
-                filter: 'none'
-            },
-            animation:
-            {
-                duration: 500
-            },
-            controls:
-            {
-                toggleDefault: 'none',
-                toggleLogic: 'and'
-            }
+            duration: 500
+        },
+        controls:
+        {
+            toggleDefault: 'none',
+            toggleLogic: 'and'
+        }
+    });
+    
+    setTimeout(function()
+    {
+        //ALTERNATE SEARCH BARS
+        $('#search-bar').hover(function()
+        {
+            $(this).removeClass("hide");
+            $('#filter').toggleClass("hide");
+            $('#filter').removeClass("show");
         });
-        
+
         //GET SEARCH RESULTS
         $('#search').submit(function(event)
         {
@@ -80,55 +79,36 @@ jQuery(document).ready(function(){
                 // If no searchValue, treat as filter('all')
                 mixer.filter('all');
             }
-            
+
             $('#filter button').removeClass("mixitup-control-active");
             $('.videos input').prop('checked', false);
         });
-    });
-    
-    //ALTERNATE SEARCH BARS
-    $('#search-bar').hover(function()
-    {
-        $(this).removeClass("hide");
-        $('#filter').toggleClass("hide");
-        $('#filter').removeClass("show");
-    });
-    
-    //alternate for mobile
-    $('#search-bar').click(function()
-    {
-        $(this).removeClass("hide");
-        $('#filter').toggleClass("hide");
-        $('#filter').removeClass("show");
-    });
-    
-    $('#filter h2').click(function()
-    {
-        $('#filter').toggleClass("show");
-        
-        if($('#search-bar').hasClass("hide"))
+
+        //alternate for mobile
+//        $(document).on('click', '#search-bar', function()
+//        {
+//            $(this).removeClass("hide");
+//            $('#filter').toggleClass("hide");
+//            $('#filter').removeClass("show");
+//        });
+
+        $(document).on('click', '#filter h2', function()
         {
-            $('#search-bar').removeClass("hide");
-        }
-        else
-        {
-            $('#search-bar').addClass("hide");
-        }
-    });
-    
-    // CREATE INDUSTY CAROUSEL
-        $('.industryCarousel').slick({
-            dots: true,
-            vertical: false,
-            centerMode: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2500
+            $('#filter').toggleClass("show");
+
+            if($('#search-bar').hasClass("hide"))
+            {
+                $('#search-bar').removeClass("hide");
+            }
+            else
+            {
+                $('#search-bar').addClass("hide");
+            }
         });
+
+    }, 10);
     
 });
-
 
 ////    FUNCTIONS   ////
 
@@ -155,12 +135,14 @@ function fillIndustries(data, tabletop)
             
             //pull stats from data object
             var job = tempData.Name;
-            var jobTitle = tempData.Name;
+            var jobSpan = tempData.Name;
             
             if(tempData.VideoEmbed != "")
             {
-                jobTitle = jobTitle + ' <span class="play">&#9654;</span>';
-            } 
+                jobSpan = '<img src="./img/icons/ICONS_MENU_Play.png" alt=""><p>' + job + '</p>';
+            }
+            else
+                jobSpan = '<p>' + job + '</p>';
             
             var teaser = "./img/teasers/" + tempData.Name + ".jpg";//"url to image..." + tempData.Name;
             var industry = tempData.Sector;
@@ -168,7 +150,7 @@ function fillIndustries(data, tabletop)
             
 //            var newJob = '<a data-name="' + job.toLowerCase() + '" class="job" href="' + link + '">' + job + '</a>';
             
-            var newJob = '<div data-name="' + job.toLowerCase() + '" class="job"><a href="' + link + '"><div><img src="' + teaser + '"></div> <p class="JobTitle">' + jobTitle + '</p></a>            </div>';
+            var newJob = '<div data-name="' + job.toLowerCase() + '" class="job"><a href="' + link + '"><div class="job-icon"><img src="' + teaser + '"></div><div class="job-title">' + jobSpan + '</div></a></div>';
             
             $('[data-name*="' + industry + '"] .jobs').append(newJob);
         }
@@ -194,14 +176,16 @@ function fillSpot(data, tabletop)
         var teaser = "./img/teasers/" + newData[x].Name + ".jpg";//"url to image..." + data[x].Name;
         var industry = newData[x].Sector;
         var link = newData[x].PageURL;
-                
-         if(newData[x].VideoEmbed != "")
+    
+        if(newData[x].VideoEmbed != "")
         {
-            jobSpan = job + ' <span class="play">&#9654;</span>';
-        } 
+            jobSpan = '<img src="./img/icons/ICONS_MENU_Play.png" alt=""><h1>' + job + '</h1>';
+        }
+        else
+            jobSpan = '<h1>' + job + '</h1>';
         
         //add object to results
-        var newSpot = '<div data-name="' + job.toLowerCase() + '" class="spot"><a href="' + link + '"><div><img src="' + teaser + '"></div> <h1 class="JobTitle">' + jobSpan + '</h1></a></div>';
+        var newSpot = '<div data-name="' + job.toLowerCase() + '" class="spot"><a href="' + link + '"><img class="teaser" src="' + teaser + '"><div class="job-title">' + jobSpan + '</div></a></div>';
         
         $('#spotlight .spotlightCarousel').append(newSpot);
         
@@ -216,7 +200,7 @@ function showResults(data)
     {
         //pull stats from data object
         var job = data[x].Name;
-        var jobSpan = job;
+        var jobSpan;
         var teaser = "./img/teasers/" + data[x].Name + ".jpg";//"url to image..." + data[x].Name;
         var industry = data[x].Sector;
         var link = data[x].PageURL;
@@ -229,15 +213,17 @@ function showResults(data)
         }
         skills = temp;
         
-         if(data[x].VideoEmbed != "")
+        if(data[x].VideoEmbed != "" && data[x].VideoEmbed != undefined)
         {
-            jobSpan = job + ' <span class="play">&#9654;</span>';
+            jobSpan = '<img src="./img/icons/ICONS_MENU_PlayBlue.png" alt=""><p>' + job + '</p>';
             
             skills = skills + " video";
-        } 
+        }
+        else
+            jobSpan = '<p>' + job + '</p>';
         
         //add object to results
-        var newResult = '<div data-name="' + job.toLowerCase() + '" class="result mix ' + skills + '"><a href="' + link + '"><div><img src="' + teaser + '"></div> <p class="JobTitle">' + jobSpan + '</p></a></div>';
+        var newResult = '<div data-name="' + job.toLowerCase() + '" class="result job mix ' + skills + '"><a href="' + link + '"><div class="job-icon"><img src="' + teaser + '"></div><div class="job-title">' + jobSpan + '</div></a></div>';
         
         $('#search .results').append(newResult);
     }
