@@ -180,6 +180,7 @@ function hours(row)
     var hours = parseInt(row.ShiftHours);
     console.log("hours: " + hours);
     var pie = document.getElementById("hours-pie");
+    console.log(pie);
     var hoursDoughnutChart = new Chart(pie,
     {
         type: 'doughnut',
