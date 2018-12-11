@@ -63,6 +63,8 @@ function runjobs()
     var jobName = $("title").text();
     //separate selected row
     var row = jobs.filter(x => x.Name === jobName)[0];
+    
+    console.log(row);
 
     //display job name
     $("#JobTitle").text(row.Name);
@@ -78,13 +80,14 @@ function runjobs()
     $('#about .bg img').attr("src", src);
     
     //add video
-    if(row.VideoEmbed != "")
+    if(row.VideoEmbed != "" && row.VideoEmbed != undefined)
     {
         $("#video .content-wrapper .video-container").append(row.VideoEmbed);
     }
     else
     {
-        $('#video').css("display", "none");
+//        $('#video').css("display", "none");
+        $('#video').remove();
         $('#videoButton').css("display", "none");
     }
     
@@ -299,10 +302,12 @@ function fillSponsors(row)
             }
         }
         else
-        $("#sponsors").css("display", "none");
+//        $("#sponsors").css("display", "none");
+        $("#sponsors").remove();
     }
     else
-        $("#sponsors").css("display", "none");
+//        $("#sponsors").css("display", "none");
+        $("#sponsors").remove();
 }
 
 function salary(row)
