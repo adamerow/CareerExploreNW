@@ -133,7 +133,7 @@ function fillIndustries(data, tabletop)
             var job = tempData.Name;
             var jobSpan = tempData.Name;
             
-            if(tempData.VideoEmbed != "")
+            if(tempData.VideoEmbed != "" && tempData.VideoEmbed != undefined)
             {
                 jobSpan = '<img src="./img/icons/ICONS_MENU_Play.png" alt=""><p>' + job + '</p>';
             }
