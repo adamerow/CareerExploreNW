@@ -14,8 +14,16 @@
     </head>
      
     <body>
-     
-         <header>
+       
+        <div id="page-cover">
+           
+            <div class="blue-cover"></div>
+            
+        </div>
+        
+        <div class="pre-load"></div>
+        
+        <header>
             <a href="./index.html" id="logoContainer">
                 <button id="logo">
                     <img src="img/CareerExploreLogo.svg" alt="CareerExploreNW">
@@ -23,7 +31,7 @@
             </a>
             <div id="nav-bar">
                 <a href="/apprentice.html">Apprenticeships</a>
-                <a href="/education.html">Education</a>
+                <a href="#">Education</a>
                 <a href="/about.html">About</a>
             </div>
             <div id="hamburger-wrap">
@@ -32,116 +40,133 @@
                 </span>
             </div>
         </header>
+        
+        <div class="container">
       
-        <div id="pageCover">
-            <div class="white"></div>
-            <div class="green"></div>
-        </div>
-       
-        <button onclick="topFunction()" id="toTop">&#8743;</button>
-        
-        <article id="passport">
-            <div class="passportSpot">
-                <a href="http://www.nextgenzone.org/passport-worksheet/">
-                    <img src="./img/resources/path_icon.png" alt="">
-                    <h2>Next Generation Zone</h2>
-                </a>
-            </div>
-            <div class="passportInfo">
-                <a href="http://www.nextgenzone.org/passport-worksheet/">
-                    <p>The Passport to Career Success is a free multi-media career platform for use by individuals, teachers and counselors. The Passport includes links to online sources of career planning exploration resources and tools, and will guide you through all phases of launching your career.</p>
-                </a>
-            </div>
-        </article>
-            
-        <article id="links">
-           
-            <div class="result"  ontouchstart="this.classList.toggle(' + "'hover'" + ');">
-                <div class="flip">
-                    <div class="front">
-                        <h2>College Bound</h2>
-                        <img src="img/resources/school_icon.png">
-                    </div>
-                    
-                    <div class="back">
+            <section id="links" class="slide">
+
+                <div class="bg"></div>
+
+                <div class="content-wrapper">
+                
+                <h1>Educational Resources</h1>
+                
+                <ul>
+                    <h2>College Bound</h2>
+                    <li>
                         <a href="#">Find a school</a>
+                    </li>
+                    <li>
                         <a href="#">Application tips</a>
+                    </li>
+                    <li>
                         <a href="#">Financial aid tips</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="result"  ontouchstart="this.classList.toggle(' + "'hover'" + ');">
-                <div class="flip">
-                    <div class="front">
-                        <h2>Continuing Education</h2>
-                        <img src="img/resources/adult_icon.png">
-                    </div>
-                    
-                    <div class="back">
-<!--
-                        <a href="https://www.careerexplorenw.org/educational-resources/#">Find a school</a>
-                        <a href="https://www.careerexplorenw.org/educational-resources/#">Application tips</a>
-                        <a href="https://www.careerexplorenw.org/educational-resources/#">Financial aid tips</a>
--->
-                    </div>
-                </div>
-            </div>
-            
-            <div class="result"  ontouchstart="this.classList.toggle(' + "'hover'" + ');">
-                <div class="flip">
-                    <div class="front">
-                        <h2>Job Hunting</h2>
-                        <img src="img/resources/job_icon.png">
-                    </div>
-                    
-                    <div class="back">
+                    </li>
+                </ul>
+
+                <ul>
+                    <h2>Continuing Education</h2>
+                    <li>
+                        <a href="#">Find a school</a>
+                    </li>
+                    <li>
+                        <a href="#">Application tips</a>
+                    </li>
+                    <li>
+                        <a href="#">Online options</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <h2>Job Hunting</h2>
+                    <li>
                         <a href="#">Resume Tips</a>
+                    </li>
+                    <li>
                         <a href="#">Interview Tips</a>
+                    </li>
+                    <li>
                         <a href="#">Local Job Listings</a>
-                    </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            </section>
+            
+            <section id="passport" class="slide">
+
+                <div class="bg"></div>
+
+                <div class="content-wrapper">
+                
+                <h1>Next Generation Zone</h1>
+                <a class="passportSpot" href="http://www.nextgenzone.org/">
+                    <img src="http://www.nextgenzone.org/images/NextGen_logo_white.png" alt="">
+                </a>
+                <p class="passportInfo">The Passport to Career Success is a free multi-media career platform for use by individuals, teachers and counselors. The Passport includes links to online sources of career planning exploration resources and tools, and will guide you through all phases of launching your career.</p>
+                <div class="buttons">
+                    <button onclick="location.href = 'http://www.nextgenzone.org/';">Next Generation Zone</button>
+                    <button onclick="location.href = 'http://www.nextgenzone.org/passport-worksheet/';">Passport login</button>
                 </div>
+
             </div>
-        </article>
+
+            </section>
+
+            <section id="schools" class="slide">
+
+                <div class="bg"></div>
+
+                <div class="content-wrapper">
+
+                <h1>Local Schools</h1>
+
+                <div class="grid">
+
+                    <a href="http://ccs.spokane.edu/">
+                        <img src="./img/icons/logos/Schools/CENW_School_Logos_CCS.png" alt="">
+                    </a>
+                    <a href="http://ewu.edu/">
+                        <img src="./img/icons/logos/Schools/CENW_School_Logos_EWU.png" alt="">
+                    </a>
+                    <a href="https://www.nic.edu/">
+                        <img src="./img/icons/logos/Schools/CENW_School_Logos_NIC.png" alt="">
+                    </a>
+                    <a href="https://spokane.wsu.edu/">
+                        <img src="./img/icons/logos/Schools/CENW_School_Logos_WSU.png" alt="">
+                    </a>
+                    <a href="https://www.whitworth.edu/">
+                        <img src="./img/icons/logos/Schools/CENW_School_Logos_WTU.png" alt="">
+                    </a>
+                    <a href="https://www.gonzaga.edu/">
+                        <img src="./img/icons/logos/Schools/CENW_School_Logos_ZAG.png" alt="">
+                    </a>
+
+                </div>
+
+                <footer>
+                    <a href="https://www.ksps.org">
+                        <img src="../img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_KSPS.png" alt="">
+                    </a>
+                    <img src="../img/CareerExploreLogo_Typography.svg" alt="" class="logoText">
+                    <a href="https://wdcspokane.com/">
+                        <img src="../img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_Spokane%20Workforce%20Council.png" alt="">
+                    </a>
+                </footer>
+
+            </div>
+
+            </section>
         
-        <article id="schools">
-            <h2>Local Schools</h2>
-            <div class="grid">
-                <a href="http://ccs.spokane.edu/">
-                    <img src="./img/icons/logos/Schools/CENW_School_Logos_CCS.png" alt="">
-                </a>
-                <a href="http://ewu.edu/">
-                    <img src="./img/icons/logos/Schools/CENW_School_Logos_EWU.png" alt="">
-                </a>
-                <a href="https://www.nic.edu/">
-                    <img src="./img/icons/logos/Schools/CENW_School_Logos_NIC.png" alt="">
-                </a>
-                <a href="https://spokane.wsu.edu/">
-                    <img src="./img/icons/logos/Schools/CENW_School_Logos_WSU.png" alt="">
-                </a>
-                <a href="https://www.whitworth.edu/">
-                    <img src="./img/icons/logos/Schools/CENW_School_Logos_WTU.png" alt="">
-                </a>
-                <a href="https://www.gonzaga.edu/">
-                    <img src="./img/icons/logos/Schools/CENW_School_Logos_ZAG.png" alt="">
-                </a>
-            </div>
-        </article>
+        </div>
     
     </body>
-    
-    <footer>
-        <a href="https://www.ksps.org">
-            <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_KSPS.png" alt="">
-        </a>
-        <a href="https://wdcspokane.com/">
-            <img src="./img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_Spokane%20Workforce%20Council.png" alt="">
-        </a>
-    </footer>
 
     <script src="./js/jquery.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/global.js"></script>
+    <script src="./js/slide-layout.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
     
     <script>
