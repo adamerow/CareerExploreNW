@@ -1,9 +1,5 @@
 $(document).bind('complete', function()
 {
-    console.log(jobs);
-
-    console.log(sponsors);
-
     showResults(jobs);
 
     fillIndustries(jobs);
@@ -165,11 +161,8 @@ function fillSpot(data, tabletop)
         return row.Spotlight == "spot";
     });
     
-    console.log(newData);
-    
     for(var x = 0; x < newData.length; x++)
     {
-        
         //pull stats from data object
         var job = newData[x].Name;
         var jobSpan = job;
