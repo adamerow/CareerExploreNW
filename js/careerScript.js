@@ -94,7 +94,6 @@ function runjobs()
     for(var x = 0; x < row.Skills.length; x++)
     {
         temp = skills.filter(y => y.name === row.Skills[x])[0];
-        console.log(temp);
         temp.src = "../img/icons/skills/ICONS_SKILLS_" + temp.name + ".png";
         $("#Skills ul").append('<li ontouchstart="this.classList.toggle(' + "'hover'" + ');"><img src="' + temp.src + '"><h3 class="tooltip">' + temp.tooltip + '</h3><p class="about">' + temp.about + '</p></li>');
     }    
@@ -178,9 +177,7 @@ function hours(row)
 
     //  DOUGHNUT //
     var hours = parseInt(row.ShiftHours);
-    console.log("hours: " + hours);
     var pie = document.getElementById("hours-pie");
-    console.log(pie);
     var hoursDoughnutChart = new Chart(pie,
     {
         type: 'doughnut',
@@ -294,7 +291,6 @@ function fillSponsors(row)
             for(var x = 0; x < row.Sponsors.length; x++)
             {
                 temp = sponsors.filter(y => y.Name === row.Sponsors[x]);
-                console.log(temp);
                 
                 if(temp[0].Link != "" && temp[0].Link != null)
                     $("#sponsors .grid").append('<a href="' + temp[0].Link + '">' + '<img src="../img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_' + temp[0].Name + '.png" alt=""></a>');
@@ -321,8 +317,6 @@ function salary(row)
     var seniorLow = parseInt(row.SalarySeniorLow);
     var seniorHigh = parseInt(row.SalarySeniorHigh);
     var ave = parseInt(row.AvgSalary);
-    
-    console.log(entryLow + ", " + entryHigh + ", " + seniorLow + ", " + seniorHigh + ", " + ave);
     
     var salaryChart = new Chart($("#salaryChart"),
     {
