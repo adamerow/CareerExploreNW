@@ -52,7 +52,7 @@ h4 /* thin subhead */
 {
     font-size: calc(1em + 1vmin);
     font-weight: 300;
-    text-align: center;
+    text-align: right;
     margin: 0;
     color: #4994D0;
     text-transform: uppercase;
