@@ -1,5 +1,5 @@
 /* set up XMLHttpRequest */
-var url = "../js/Jobs-Grid.xlsx";
+var url = "https://adamerow.github.io/careerexplorenw/js/Jobs-Grid.xlsx";
 var oReq = new XMLHttpRequest();
 oReq.open("GET", url, true);
 oReq.responseType = "arraybuffer";
