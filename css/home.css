@@ -123,6 +123,10 @@
 {
     height: 100%;
 }
+#spotlight .spot.slick-current
+{
+    z-index: 8 !important;
+}
 #spotlight .spot
 {
     height: 100%;
@@ -188,6 +192,7 @@
 #spotlight .slick-dots
 {
     bottom: 45px;
+    z-index: 8;
     transform: rotate(-4deg);
 }
 #spotlight .slick-dots li button:before
