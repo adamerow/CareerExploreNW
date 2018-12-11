@@ -178,6 +178,7 @@ function hours(row)
 
     //  DOUGHNUT //
     var hours = parseInt(row.ShiftHours);
+    console.log("hours: " + hours);
     var pie = document.getElementById("hours-pie");
     var hoursDoughnutChart = new Chart(pie,
     {
@@ -319,6 +320,9 @@ function salary(row)
     var seniorLow = parseInt(row.SalarySeniorLow);
     var seniorHigh = parseInt(row.SalarySeniorHigh);
     var ave = parseInt(row.AvgSalary);
+    
+    console.log(entryLow + ", " + entryHigh + ", " + seniorLow + ", " + seniorHigh + ", " + ave);
+    
     var salaryChart = new Chart($("#salaryChart"),
     {
         type: "line",
