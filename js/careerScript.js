@@ -94,6 +94,7 @@ function runjobs()
     for(var x = 0; x < row.Skills.length; x++)
     {
         temp = skills.filter(y => y.name === row.Skills[x])[0];
+        console.log(temp);
         temp.src = "../img/icons/skills/ICONS_SKILLS_" + temp.name + ".png";
         $("#Skills ul").append('<li ontouchstart="this.classList.toggle(' + "'hover'" + ');"><img src="' + temp.src + '"><h3 class="tooltip">' + temp.tooltip + '</h3><p class="about">' + temp.about + '</p></li>');
     }    
@@ -291,6 +292,7 @@ function fillSponsors(row)
             for(var x = 0; x < row.Sponsors.length; x++)
             {
                 temp = sponsors.filter(y => y.Name === row.Sponsors[x]);
+                console.log(temp);
                 
                 if(temp[0].Link != "" && temp[0].Link != null)
                     $("#sponsors .grid").append('<a href="' + temp[0].Link + '">' + '<img src="../img/icons/logos/Sponsors/CENW%20Underwriting%20Logos_' + temp[0].Name + '.png" alt=""></a>');
@@ -475,7 +477,6 @@ function salary(row)
     //job select options
     $("#field-select").change(function ()
     {
-
         var compField = jobs.filter(x => x.Sector === $(this).val());
 
         $("#job-select").text("");
