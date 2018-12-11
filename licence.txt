@@ -2,8 +2,6 @@ CareerExploreNW - Copyright (c) 2018 KSPS Public Television
 
 -----------------------------------------------------------------------
 
-Tabletop.js - Copyright (c) 2012-2018 Jonathan Soma - https://github.com/jsoma/tabletop
-
 Chart.js - Copyright (c) 2018 Chart.js Contributors - https://github.com/chartjs/Chart.js
 
 Slick - Copyright (c) 2013-2016 Ken Wheeler - http://kenwheeler.github.io/slick/
