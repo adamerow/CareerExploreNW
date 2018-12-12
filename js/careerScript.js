@@ -15,11 +15,11 @@ $(document).bind('complete', function()
     
     setTimeout(function()
     {
-//        console.log(jobs);
+        console.log(jobs);
         
-//        console.log(skills);
+        console.log(skills);
 
-//        console.log(sponsors);
+        console.log(sponsors);
         
         runjobs();
     }, 100);
