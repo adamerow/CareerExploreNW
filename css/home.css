@@ -314,13 +314,15 @@
 {
     width: 100%;
 }
-.options #filter .buttons
+.options .buttons
 {
     width: 100%;
-    height: 0;
-    top: 40px;
+    max-width: 700px;
+    max-height: 0;
+    margin-top: 15px;
+/*    top: 40px;*/
     opacity: 0;
-    position: absolute;
+/*    position: absolute;*/
     overflow: hidden;
     display: -webkit-flex;
     display: -moz-flex;
@@ -330,12 +332,12 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-.options #filter.show .buttons
+.options .buttons.show
 {
-    height: auto;
+    max-height: 1000px;
     opacity: 1;
 }
-#filter button
+.options button
 {
     border: 0;
     margin: 3px;
@@ -347,15 +349,15 @@
     background: lightgray;
     color: var(--light-green);
 }
-#filter button.large
+.options button.large
 {
     margin: 0;
-    height: 40px;
+    min-height: 40px;
     width: 45%;
     margin: 3px;
     font-size: 1em;
 }
-#filter button.mixitup-control-active
+.options button.mixitup-control-active
 {
     color: whitesmoke;
     background: #4994D0;
