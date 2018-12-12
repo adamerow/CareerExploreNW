@@ -53,17 +53,32 @@ $(document).bind('complete', function()
     $(document).trigger('fade');
     
         //ALTERNATE SEARCH BARS
-        $(document).on('hover', '#search-bar', function()
-//        $('#search-bar').hover(function()
+        $(document).on(
+        {
+            mouseenter: function ()
+            {
+                //stuff to do on mouse enter
+                $(this).removeClass("hide");
+                $('#filter').addClass("hide");
+                $('#filter').removeClass("show");
+                $('.buttons').removeClass("show");
+            },
+            mouseleave: function ()
+            {
+                //stuff to do on mouse leave
+                $('#filter').removeClass("hide");
+            }
+        }, '#search-bar');
+    
+        $(document).on('click', '#search-bar', function()
         {
             $(this).removeClass("hide");
-            $('#filter').toggleClass("hide");
             $('#filter').removeClass("show");
+            $('.buttons').removeClass("show");
         });
 
         //GET SEARCH RESULTS
         $(document).on('submit', '#search', function()
-//        $('#search').submit(function(event)
         {
             event.preventDefault();
 
@@ -88,6 +103,7 @@ $(document).bind('complete', function()
         $(document).on('click', '#filter h2', function()
         {
             $('#filter').toggleClass("show");
+            $('.buttons').toggleClass("show");
 
             if($('#search-bar').hasClass("hide"))
             {
@@ -98,6 +114,14 @@ $(document).bind('complete', function()
                 $('#search-bar').addClass("hide");
             }
         });
+    
+        // clear search bar on filter toggle
+//        $(document).on('click', '#filter button', function()
+//        {
+//            console.log("button clicked");
+//            
+//           document.getElementById('search-bar').reset();
+//        });
     
 });
 
