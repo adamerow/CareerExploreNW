@@ -7,7 +7,8 @@ $(document).bind('complete', function()
     fillSpot(jobs);
     
     // CREATE SPOTLIGHT CAROUSEL
-    $('.spotlightCarousel').slick({
+    $('.spotlightCarousel').slick(
+    {
         dots: true,
         centerMode: true,
         focusOnSelect: true,
@@ -47,10 +48,13 @@ $(document).bind('complete', function()
         }
     });
     
-    setTimeout(function()
-    {
+    console.log("complete");
+
+    $(document).trigger('fade');
+    
         //ALTERNATE SEARCH BARS
-        $('#search-bar').hover(function()
+        $(document).on('hover', '#search-bar', function()
+//        $('#search-bar').hover(function()
         {
             $(this).removeClass("hide");
             $('#filter').toggleClass("hide");
@@ -58,7 +62,8 @@ $(document).bind('complete', function()
         });
 
         //GET SEARCH RESULTS
-        $('#search').submit(function(event)
+        $(document).on('submit', '#search', function()
+//        $('#search').submit(function(event)
         {
             event.preventDefault();
 
@@ -80,14 +85,6 @@ $(document).bind('complete', function()
             $('.videos input').prop('checked', false);
         });
 
-        //alternate for mobile
-//        $(document).on('click', '#search-bar', function()
-//        {
-//            $(this).removeClass("hide");
-//            $('#filter').toggleClass("hide");
-//            $('#filter').removeClass("show");
-//        });
-
         $(document).on('click', '#filter h2', function()
         {
             $('#filter').toggleClass("show");
@@ -101,8 +98,6 @@ $(document).bind('complete', function()
                 $('#search-bar').addClass("hide");
             }
         });
-
-    }, 10);
     
 });
 

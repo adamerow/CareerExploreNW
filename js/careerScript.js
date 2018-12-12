@@ -11,18 +11,23 @@ var temp = null;
 
 $(document).bind('complete', function()
 {    
-    fillPage();
+    // load contetnt from baseCareer
+    var url = 'https://adamerow.github.io/careerexplorenw/careers/baseCareer.html'
+    fetch(url).catch(error => console.log('Authorization failed : ' + error.message));
     
-    setTimeout(function()
+    $('body').load(url + ' #page-cover, .pre-load, header, .container', function()
     {
-        console.log(jobs);
-        
-        console.log(skills);
+//        console.log(jobs);
+//
+//        console.log(skills);
+//
+//        console.log(sponsors);
 
-        console.log(sponsors);
-        
         runjobs();
-    }, 100);
+        console.log("complete");
+        
+        $(document).trigger('fade');
+    });
     
     // SCROLL TO VIDEO
     $(document).on('click', '#videoButton', function()
@@ -43,19 +48,8 @@ $(document).bind('complete', function()
         }, 1000);
 
     });
-    
-//    $('*').on('click', function()
-//    {
-//        console.log($(this));
-//    });
-    
-});
 
-function fillPage()
-{
-    // load contetnt from baseCareer
-    $('body').load('../careers/baseCareer.html' + ' #page-cover, .pre-load, header, .container');
-}
+});
 
 function runjobs()
 {
@@ -109,8 +103,6 @@ function runjobs()
     fillSponsors(row);
     
     salary(row);
-    
-    $(document).trigger('data run');
 }
 
 function education(row)
@@ -147,22 +139,17 @@ function schools(row)
             row.TrainingLinkURL = row.TrainingLinkURL.split(',');
         }
         
+        console.log(row.TrainingLinkName);
         for(var x = 0; x < row.TrainingLinkName.length; x++)
         {
-            if (row.TrainingLinkURL != undefined)
+            temp = row.TrainingLinkName[x];
+            
+            if (row.TrainingLinkURL != undefined && row.TrainingLinkURL[x] != "" && row.TrainingLinkURL[x] != null)
             {
-                if(row.TrainingLinkURL[x] != "" && row.TrainingLinkURL[x] != null)
-                {
-                    temp = row.TrainingLinkURL[x];
-                    $("#TrainingResources").append('<li><a href="' + temp + '">' + row.TrainingLinkName[x] + '</a></li>');
-                }
-                else
-                    temp = "#";
+                temp = '<a href="' + temp + '">' + row.TrainingLinkName[x] + '</a>';
             }
-            else
-                temp = "#";
 
-            $("#TrainingResources").append('<li>' + row.TrainingLinkName[x] + '</li>');
+            $("#TrainingResources").append('<li>' + temp + '</li>');
         }
     }
     else
@@ -179,7 +166,7 @@ function hours(row)
 
     //  DOUGHNUT //
     var hours = parseInt(row.ShiftHours);
-    var pie = document.getElementById("hours-pie");
+    var pie = $('#hours-pie');
     var hoursDoughnutChart = new Chart(pie,
     {
         type: 'doughnut',
@@ -319,8 +306,8 @@ function salary(row)
     var seniorLow = parseInt(row.SalarySeniorLow);
     var seniorHigh = parseInt(row.SalarySeniorHigh);
     var ave = parseInt(row.AvgSalary);
-    
-    var salaryChart = new Chart($("#salaryChart"),
+    var chart = $("#salaryChart");
+    var salaryChart = new Chart(chart,
     {
         type: "line",
         options:
@@ -478,6 +465,7 @@ function salary(row)
     //job select options
     $("#field-select").change(function ()
     {
+
         var compField = jobs.filter(x => x.Sector === $(this).val());
 
         $("#job-select").text("");

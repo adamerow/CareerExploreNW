@@ -1,19 +1,12 @@
 // Wait for window load
-$(window).load(function() {
-    // Animate loader off screen
+$(window).bind('fade', function()
+{            
+    console.log("fade");
     $(".pre-load").fadeOut(500);
 });
 
-$(document).bind('data run', function()
-{            
-    console.log("data run");
-    $(".pre-load").fadeOut(500);
-    
-});  
-
 jQuery(document).ready(function()
-{
-                 
+{          
     //open hamburger menu
     $(document).on('click', '#hamburger', function()
     {

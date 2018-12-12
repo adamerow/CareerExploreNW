@@ -1,5 +1,6 @@
 /* set up XMLHttpRequest */
 var url = "https://adamerow.github.io/careerexplorenw/js/Jobs-Grid.xlsx";
+//var url = "../js/Jobs-Grid.xlsx";
 var oReq = new XMLHttpRequest();
 oReq.open("GET", url, true);
 oReq.responseType = "arraybuffer";
@@ -44,6 +45,7 @@ oReq.onload = function(e)
     result[2].splice(0,1);
     skills = result[2];
 
+    console.log("sheets done");
     $(document).trigger('complete');
 }
 oReq.send();
