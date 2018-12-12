@@ -12,7 +12,7 @@ var temp = null;
 $(document).bind('complete', function()
 {    
     // load contetnt from baseCareer
-    var url = 'https://adamerow.github.io/careerexplorenw/careers/baseCareer.html'
+    var url = '../careers/baseCareer.html'
     fetch(url).catch(error => console.log('Authorization failed : ' + error.message));
     
     $('body').load(url + ' #page-cover, .pre-load, header, .container', function()
