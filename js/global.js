@@ -4,6 +4,13 @@ $(window).load(function() {
     $(".pre-load").fadeOut(500);
 });
 
+$(document).bind('data run', function()
+{            
+    console.log("data run");
+    $(".pre-load").fadeOut(500);
+    
+});  
+
 jQuery(document).ready(function()
 {
                  
