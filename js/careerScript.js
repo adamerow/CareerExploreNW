@@ -109,6 +109,8 @@ function runjobs()
     fillSponsors(row);
     
     salary(row);
+    
+    $(document).trigger('data run');
 }
 
 function education(row)
