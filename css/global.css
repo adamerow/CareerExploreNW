@@ -113,7 +113,7 @@ button:focus
 body
 {
     letter-spacing: 1px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", "Arial", sans-serif;
     margin: 0;
     min-height: 100vh;
     position: relative;
@@ -139,7 +139,7 @@ body *
 header
 {
     height: 60px;
-    width: calc(100% - 60px);
+    width: calc(100vw - 60px);
     background: #fff;
     z-index: 10; 
     position: fixed;
@@ -496,7 +496,7 @@ footer .logoText
         height: 75%;
     }
 }
-@media (max-width: 599px)
+@media (max-width: 699px)
 {
     #nav-bar
     {
@@ -515,10 +515,6 @@ footer .logoText
         height: 180px;
     }
     
-    #logo
-    {
-        width: 50px;
-    }
     
     footer .logoText
     {
@@ -532,27 +528,17 @@ footer .logoText
         font-size: 2.5em;
     }
 }
-@media (max-width: 699px) and (min-width: 600px)
-{    
-    h1
-    {
-        font-size: 2.5em;
-    }
-    
-    #logo
-    {
-        width: 50px;
-    }
-    
-    footer .logoText
-    {
-        display: none;
-    }
-}
 @media (max-width: 899px) and (min-width: 700px)
 {
     h1
     {
         font-size: 3.25em;
+    }
+}
+@media (max-width: 945px)
+{
+    #logo
+    {
+        width: 50px;
     }
 }

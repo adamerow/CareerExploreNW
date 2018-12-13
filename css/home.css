@@ -1,5 +1,3 @@
-/*  https://codepen.io/anon/pen/ZmGONr?editors=0100  */
-
 /* set z-index */
 .slide:first-child
 {
@@ -99,7 +97,7 @@
 }
 #spotlight .bg
 {
-    background: -webkit-linear-gradient(#253E5E, #586742); 
+    background: whitesmoke; 
 }
 #spotlight .content-wrapper
 {
@@ -132,27 +130,42 @@
     height: 100%;
     cursor: pointer;
     display: inline-block;
-    background: -webkit-linear-gradient(#253E5E, #586742);
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .75)); 
     z-index: 0 !important;
 }
 #spotlight .spot .teaser
 {
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     position: absolute;
-    left: -50%;
-    right: -50%;
+    left: 0;
+    right: 0;
     margin: 0 auto;
-    top: 0;
-    bottom: 0;
-    filter: grayscale(1);
+    top: 50%;
+    transform: translateY(-50%);
+/*    filter: grayscale(1);*/
     mix-blend-mode: overlay;
 }
-#spotlight .spot .job-title
+
+#spotlight .spot .spot-copy
 {
     position: absolute;
     bottom: 90px;
     left: 60px;
     right: 60px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    pointer-events: none;
+}
+#spotlight .spot-copy .job-title
+{
+    width: 100%;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -171,9 +184,37 @@
 #spotlight .spot .job-title h1
 {
     text-align: left;
-/*    font-size: 1.75em;*/
     font-weight: 800;
-    pointer-events: none;
+}
+
+#spotlight .spot-copy p
+{
+    width: 50%;
+    flex-grow: 1;
+    min-width: 260px;
+    max-width: 700px;
+}
+
+#spotlight .spot-copy .logos
+{
+    margin-right: 15px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#spotlight .spot-copy .logos a
+{
+    display: contents;
+}
+#spotlight .spot-copy .logos img
+{
+    height: 30px;
+    margin: 5px;
 }
 
 #spotlight .slick-arrow
@@ -210,7 +251,7 @@
 
 #search .bg
 {
-    background-color: #ffffff;
+    background-color: whitesmoke;
     background-image: var(--topography);
 }
 
@@ -243,25 +284,20 @@
 .forms
 {
     width: 100%;
-    z-index: 4;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-row-gap: 15px;
+    grid-template-columns: 50% 50%;
+    justify-items: center; 
 }
-
-/* search */
-#search-bar
+.options #filter,
+.options #search-bar
 {
-    width: 300px;
-    flex-grow: 1;
-    max-width: 45%;
-    margin-right: 30px;
+    width: 100%;
     position: relative;
 }
+
+
+/* search */
 #search-bar input
 {
     width: 0;
@@ -285,18 +321,11 @@
 }
 .options #search-bar:hover input
 {
-    width: calc(100% - 30px);
+    width: calc(75% - 30px);
     padding: 5px 15px;
 }
 
 /* filter */
-.options #filter
-{
-    width: 300px;
-    flex-grow: 1;
-    max-width: 45%;
-    position: relative;
-}
 #filter h2:after
 {
     content: '';
@@ -312,17 +341,16 @@
 }
 #filter.show h2:after
 {
-    width: 100%;
+    width: 60%;
 }
 .options .buttons
 {
     width: 100%;
-    max-width: 700px;
+    max-width: 900px;
     max-height: 0;
-    margin-top: 15px;
-/*    top: 40px;*/
+    grid-column: 1 / 3;
+    grid-row: 2;
     opacity: 0;
-/*    position: absolute;*/
     overflow: hidden;
     display: -webkit-flex;
     display: -moz-flex;
@@ -399,6 +427,11 @@
 
 /*    INFO    */
 
+.industryInfo
+{
+    display: flex;
+    flex-direction: column-reverse;
+}
 .industryInfo .slick-arrow
 {
     transform: scale(2);
@@ -416,7 +449,8 @@
 
 .industryInfo .slick-dots
 {
-    top: -60px;
+    margin-bottom: 30px;
+    position: relative;
     bottom: auto;
 }
 .industryInfo .slick-dots:after
@@ -472,7 +506,6 @@
     grid-column: 1 / 4;
     grid-row: 1;
     justify-self: start;
-    text-align: left;
     margin: 15px 0;
 }
 
