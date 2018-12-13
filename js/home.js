@@ -15,20 +15,21 @@ $(document).bind('complete', function()
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
-        autoplay: true,
-        autoplaySpeed: 5000
+//        autoplay: true,
+//        autoplaySpeed: 5000
     });
 
     // CREATE INDUSTY CAROUSEL
     $('.industryCarousel').slick(
     {
         dots: true,
+        arrows: false,
         vertical: false,
         centerMode: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000
+//        autoplay: true,
+//        autoplaySpeed: 5000
     });
 
     //SET SEARCH/FILTER
@@ -197,7 +198,7 @@ function fillSpot(data, tabletop)
             jobSpan = '<h1>' + job + '</h1>';
         
         //add object to results
-        var newSpot = '<div data-name="' + job.toLowerCase() + '" class="spot"><a href="' + link + '"><img class="teaser" src="' + teaser + '"><div class="job-title">' + jobSpan + '</div></a></div>';
+        var newSpot = '<div data-name="' + job.toLowerCase() + '" class="spot"><a href="' + link + '"><img class="teaser" src="' + teaser + '"><div class="spot-copy"><div class="job-title">' + jobSpan + '</div><!-- add text element here--></div></a></div>';
         
         $('#spotlight .spotlightCarousel').append(newSpot);
         
