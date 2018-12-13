@@ -32,6 +32,7 @@
             <div id="nav-bar">
                 <a href="#">Apprenticeships</a>
                 <a href="/education.html">Education</a>
+                <a href="./education.html#scholarships">Scholarships</a>
                 <a href="/about.html">About</a>
             </div>
             <div id="hamburger-wrap">
@@ -95,10 +96,10 @@
     
     <script>
         //OPEN PAGE
-        window.setTimeout(function()
-        {
-            $('#pageCover').addClass("openPage");
-        }, 1000);
-
+        $(window).bind('load', function()
+        {            
+            console.log("fade");
+            $(".pre-load").fadeOut(500);
+        });
     </script>
 </html>

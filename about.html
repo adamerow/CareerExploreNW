@@ -32,6 +32,7 @@
             <div id="nav-bar">
                 <a href="/apprentice.html">Apprenticeships</a>
                 <a href="/education.html">Education</a>
+                <a href="./education.html#scholarships">Scholarships</a>
                 <a href="#">About</a>
             </div>
             <div id="hamburger-wrap">
@@ -49,7 +50,7 @@
                 
                 <div class="content-wrapper">
                     <h1>Career Explore Northwest</h1>
-                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ducimus officia atque nam laborum asperiores aperiam minus corporis, natus in porro voluptatum vitae pariatur perspiciatis ipsa soluta! Recusandae ipsum, praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias quisquam voluptates qui iure nisi esse beatae porro tenetur impedit assumenda, cupiditate commodi asperiores ab magnam perferendis quidem veniam aliquid? Ducimus.</p>
+                    <p class="copy">This site is a community tool designed to guide people, through job spotlight videos and job/industry data, toward a job or career as well as help region employers create a talent pipeline. Under each industry cluster you will find a collection of videos that highlight different types of jobs that are available in the Spokane/North Idaho region. You will also find other great information around what schooling is needed and average salaries. CareerExplore NW is a project of KSPS Public Television in partnership with the Spokane Area Workforce Development Council. May your adventure begin!</p>
                     <div class="vidContainer">
                         <iframe src="" frameborder="0"></iframe>
                     </div>
@@ -97,10 +98,11 @@
     
     <script>
         //OPEN PAGE
-        window.setTimeout(function()
-        {
-            $('#pageCover').addClass("openPage");
-        }, 1000);
+        $(window).bind('load', function()
+        {            
+            console.log("fade");
+            $(".pre-load").fadeOut(500);
+        });
 
     </script>
     
